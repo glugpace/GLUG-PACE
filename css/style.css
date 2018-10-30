@@ -244,8 +244,8 @@ ul li a.active {
 }
 
 .blog-post-title a {
-    font-size: 2em;
-    font-weight: 500;
+    font-size: 1.4em;
+    font-weight: 600;
     line-height: 1em;
     color: #3c4043;
 }
@@ -423,10 +423,6 @@ footer p, footer a {
     .blog-post-image {
         width: 100%;
         height: auto;
-    }
-
-    .blog-post-title {
-        font-size: 1.2em;
     }
 
     .blog-post-desc {
