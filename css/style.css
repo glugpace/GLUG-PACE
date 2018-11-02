@@ -275,6 +275,10 @@ ul li a.active {
     box-shadow: 0 1px 5px rgba(104, 104, 104, 0.5);
 }
 
+.member-card a {
+    color: #000;
+}
+
 .member-card:hover {
     box-shadow: 3px 4px 10px 2px rgba(104, 104, 104, 0.3);
 }
