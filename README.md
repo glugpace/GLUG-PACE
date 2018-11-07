@@ -13,4 +13,4 @@ GLUG [PACE](pace.edu.in) (GNU AND LINUX USERS GROUP) is a part of FSMK (Free Sof
 
 We as part of GLUG are a group of students with an aim of spreading the idea of free software, hardware, and philosphy in campuses.
 
-## Noobs head over Here 👉[CLICK!!](https://github.com/Viz38/First-Pull-Request)
+## Newbies head over Here 👉[CLICK!!](https://github.com/Viz38/First-Pull-Request)
