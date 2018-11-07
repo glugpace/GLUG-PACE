@@ -12,3 +12,5 @@ Free and open-source softwares are softwares that can be classified as both Free
 GLUG [PACE](pace.edu.in) (GNU AND LINUX USERS GROUP) is a part of FSMK (Free Software Movement Karnataka), a registered not-for-profit organization with a primary objective is to create and spread awareness of Free Software technologies in different strata of society. 
 
 We as part of GLUG are a group of students with an aim of spreading the idea of free software, hardware, and philosphy in campuses.
+
+## Newbies head over Here 👉[CLICK!!](https://github.com/Viz38/First-Pull-Request)
