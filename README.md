@@ -1,4 +1,4 @@
-<p>align="center" <img src="/images/RLogo.jpg" alt="GlugPace Logo"/> </p>
+<img src="/images/RLogo.jpg" alt="GlugPace Logo"/>
 
 # GLUG PACE [Website](https://elmentrix.github.io/glugpace/)
 
