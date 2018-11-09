@@ -1,4 +1,4 @@
-![GLUG LOGO](https://raw.githubusercontent.com/GLUG-PACE/website/master/images/RLogo.jpg)
+<img src="/images/RLogo.jpg" alt="GlugPace Logo"/>
 
 # GLUG PACE [Website](https://elmentrix.github.io/glugpace/)
 
