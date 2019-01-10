@@ -1,8 +1,8 @@
 <p align="center"> 
-    <img src="/images/RLogo.jpg" alt="GlugPace Logo"/>
+    <img src="/images/logo.png" alt="GlugPace Logo"/>
  </p>
 
-# GLUG PACE [Website](https://glug-pace.github.io/)
+# GLUG PACE [Website](https://glug-pace.github.io/)🚀
 
 GLUG PACE is a group of people who works for FOSS. This project is the Official website for the GLUG PACE Community.
 Find out more information at [glugpace](https://github.com/GLUG-PACE/).
