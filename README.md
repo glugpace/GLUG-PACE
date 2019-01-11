@@ -1,5 +1,5 @@
 <p align="center"> 
-    <img src="/images/logo.png" alt="GlugPace Logo"/>
+    <img src="images/logo.png" alt="GlugPace Logo" width="200px" height="200px"/>
  </p>
 
 # GLUG PACE [Website](https://glug-pace.github.io/)🚀
