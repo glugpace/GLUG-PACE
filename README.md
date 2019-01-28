@@ -1,4 +1,4 @@
-<p align="center"> 
+﻿<p align="center"> 
     <img src="images/logo.png" alt="GlugPace Logo" width="200px" height="200px"/>
  </p>
 
@@ -17,4 +17,13 @@ GLUG [PACE](https://pace.edu.in/) (GNU/LINUX USERS GROUP) is a part of [FSMK](ht
 
 We as part of GLUG are a group of students with an aim of spreading the idea of free software, hardware, and philosphy in campuses.
 
+## Contribution
+
+Contributions to this project shall be done using Pull Requests(PR) only!, so the users must fork and clone this project to their local machines and once the user update the contents of the project send in a PR to this repository which will be verified and merged by the team leads.
+
 ## Newbies head over Here 👉<a href="https://viz38.github.io/First-Pull-Request/" target="_blank">CLICK!!</a>
+
+## Meet the Contributors 🎉
+- [Sheik Mohammed Adil](https://github.com/mohammed-adil)
+- [Vishnu Bhagirathan](https://github.com/Viz38)
+- [Nikhil Amin](https://github.com/nikhil-amin)
