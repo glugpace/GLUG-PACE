@@ -127,7 +127,7 @@ header .container {
     color: #fff;
     margin: 20px 0 10px;
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.2em;
     font-family: 'Lato', sans-serif;
 }
@@ -139,11 +139,11 @@ header .container {
 }
 
 .hero-heading {
-    color: #474747;
+    color: #404040;
     margin: 20px 0 10px;
-    font-size: 2em;
     font-family: 'Lato', sans-serif;
-    font-weight: 700;
+    font-size: 2em;
+    font-weight: 600;
     line-height: 1.2em;
 }
 
@@ -178,6 +178,7 @@ header .container {
 }
 
 .info-box p {
+    color: #808080;
     line-height: 1.5em;
 }
 
@@ -294,12 +295,12 @@ header .container {
     font-family: 'Lato', sans-serif;
     margin: 20px 0 10px;
     font-size: 28px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1em;
 }
 
 .blog-post-title a {
-    color: #3c4043;
+    color: #111111;
 }
 
 .blog-post-title a:hover {
@@ -307,8 +308,9 @@ header .container {
 }
 
 .blog-post-desc {
-    font-weight: 300px;
-    color: #878888;
+    font-size: 14px;
+    font-weight: 300;
+    color: #828282;
 }
 
 
@@ -391,14 +393,23 @@ header .container {
 }
 
 .data-heading {
+    color: #111111;
     font-family: 'Lato', sans-serif;
-    font-size: 1.8em;
+    font-size: 30px;
     font-weight: 600;
     line-height: 1em;
 }
 
+.data-author {
+    font-size: 14px;
+    font-weight: 300;
+    color: #828282;
+}
+
 .data-body {
-    font-size: 1.1em;
+    color: #242424;
+    font-size: 18px;
+    font-weight: 100;
 }
 
 /* Footer */
