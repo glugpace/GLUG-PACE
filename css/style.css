@@ -353,6 +353,7 @@ header .container {
 }
 
 .member-image {
+    min-height: 80px;
     max-width: 80px;
     border-radius: 50%;
 }
