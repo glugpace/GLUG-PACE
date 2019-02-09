@@ -152,7 +152,7 @@ header .container {
 
 /* Index page section #2 & #3*/
 #section-two .container {
-    margin: 5em auto;
+    margin: 3em auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -164,7 +164,7 @@ header .container {
 }
 
 #section-three .container {
-    margin: 5em auto;
+    margin: 3em auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
