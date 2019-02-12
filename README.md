@@ -30,3 +30,4 @@ Contributions to this project shall be done using Pull Requests(PR) only!, so th
 - [Vishnu Bhagirathan](https://github.com/Viz38)
 - [Nikhil Amin](https://github.com/nikhil-amin)
 - [Marzooq Abbas](https://github.com/Marzooq13579)
+- [Arkaan Sayed](https://github.com/arkaanfast)
