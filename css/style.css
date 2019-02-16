@@ -319,22 +319,18 @@ header .container {
 
 /* Team page */
 .team-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
     padding-bottom: 1em;
 }
 
 .member-card {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 280px;
-            flex: 1 0 280px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    margin: 0.5em 0.25em;
-    background: #fff;
+    background: #fff; 
+    height: auto;
+    margin: 10px;
+    border-radius: 2px;
+    padding: 15px;
     -webkit-box-shadow: 0 1px 5px rgba(104, 104, 104, 0.5);
             box-shadow: 0 1px 5px rgba(104, 104, 104, 0.5);
 }
@@ -352,7 +348,6 @@ header .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 1em;
 }
 
 .member-image {
@@ -366,7 +361,8 @@ header .container {
 }
 
 .member-name {
-    margin: 5px 0 0;
+    margin: 10px 0 0;
+    font-size: 15px;
 }
 
 .member-role {
