@@ -479,6 +479,10 @@ footer p, footer a {
     .blog-post-desc {
         font-weight: 200;
     }
+    
+    .modal .modal-dialog {
+        width: 560px !important;
+    }
 }
 
 @media screen and (max-width: 30em) {
@@ -568,10 +572,91 @@ footer p, footer a {
     header {
         height: 104px;
     }
+
+    .modal .modal-dialog {
+        width: 320px !important;
+    }
 }
 
 @media screen and (orientation: landscape) and (max-width: 35em) {
     header {
         height: 104px;
     }
+}
+
+.modal:target:before {
+    display: none;
+}
+.modal:before {
+    content:"";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 101;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal .modal-dialog {
+    position: fixed;
+    width: auto;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, 0);
+    z-index: 102;
+
+    width: 800px;
+    border-radius: 5px;
+    background-color: #fefefe;
+    -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    -moz-transition: -moz-transform 0.3s ease-out;
+    -o-transition: -o-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+}
+
+.modal:target .modal-dialog {
+    top: -100%;
+    -webkit-transform: translate(0, -500%);
+    -ms-transform: translate(0, -500%);
+    transform: translate(0, -500%);
+}
+
+.modal-body {
+    padding: 0 20px 20px 20px;
+}
+
+.modal-header {
+    padding: 10px 20px;
+    border-bottom: #eeeeee solid 1px;
+}
+.modal-header h2 {
+    font-size: 1.65em;
+    line-height: 1em;
+}
+
+.modal-body {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.modal-quote {
+    background-color: #2058ba;
+    color: #fff;
+    padding: 1em;
+}
+
+.btn-close {
+    color: #aaaaaa;
+    font-size: 30px;
+    text-decoration: none;
+    position: absolute;
+    right: 5px;
+    top: 0;
 }
