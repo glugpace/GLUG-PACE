@@ -33,3 +33,4 @@ Contributions to this project shall be done using Pull Requests(PR) only!, so th
 - [Arkaan Sayed](https://github.com/arkaanfast)
 - [Ahmed Ansad](https://github.com/Anshad007)
 - [Muhammed Sabith OK](https://github.com/sabithok)
+- [Saleh Arafath](https://github.com/saleharafath)
