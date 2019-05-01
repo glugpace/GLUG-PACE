@@ -117,6 +117,7 @@ header .container {
 	-ms-flex-pack: center;
 	    justify-content: center;
     text-align: center;
+    transform: translate(-50,-50);
 }
 
 #hero-image {
@@ -124,6 +125,16 @@ header .container {
     height: 200px;
     border-radius: 50%;
     overflow: hidden;
+    transition: all .2s ease-in-out;
+}
+
+.gnulogo img {
+    max-width: 100%;
+    transition: all 0.3s;
+}
+
+.gnulogo:hover img {
+    transform: scale(1.1);
 }
 
 #hero-content h1 {
