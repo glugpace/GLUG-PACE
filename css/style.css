@@ -133,6 +133,15 @@ header .container {
     transition: all 0.3s;
 }
 
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+} 
+
 .gnulogo:hover img {
     transform: scale(1.1);
 }
