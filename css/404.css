@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin|Lato');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    color: #5e5e5e;
+    background: black;
+    font-family: 'Cabin', sans-serif;    
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.padding {
+    padding-top: 5em;
+}
+
+
+/* Navbar or Header */
+header {
+    height: auto;
+    background: #fff;
+    line-height: 1rem;
+    -webkit-box-shadow: 0 2px 6px 0 rgba(0,0,0,0.12);
+            box-shadow: 0 2px 6px 0 rgba(0,0,0,0.12);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+#logo {
+    color: #111111;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 1em;
+    font-size: 1.5em;
+    font-family: 'Lato', sans-serif;
+}
+
+.navbar-links {
+    padding-left: 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+}
+
+.navbar-links .nav-link {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.navbar-links .nav-link a {        
+    color: #5e5e5e;
+    white-space: nowrap;
+    padding: 1.4em 1.2em;
+    text-transform: uppercase;
+    font-family: 'Cabin', sans-serif;
+}
+
+.navbar-links .nav-link a:hover {
+    color: rgb(102, 51, 153);
+    border-bottom: 3px solid rgb(102, 51, 153);
+}
+
+.navbar-links .nav-link a.active {
+    color: rgb(102, 51, 153);
+    border-bottom: 3px solid rgb(102, 51, 153);
+}
+
+@import 'https://fonts.googleapis.com/css?family=Inconsolata';
+
+html {
+  min-height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100%;
+  background-color: #000000;
+  background-image: radial-gradient(#11581E, #041607);
+  font-family: 'Inconsolata', Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: rgba(128, 255, 128, 0.8);
+  text-shadow:
+      0 0 1ex rgba(51, 255, 51, 1),
+      0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+.overlay {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:
+      repeating-linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0,
+      rgba(0, 0, 0, 0.3) 50%,
+      rgba(0, 0, 0, 0) 100%);
+  background-size: auto 4px;
+  z-index: 99;
+}
+
+.overlay::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      0deg,
+      transparent 0%,
+      rgba(32, 128, 32, 0.2) 2%,
+      rgba(32, 128, 32, 0.8) 3%,
+      rgba(32, 128, 32, 0.2) 3%,
+      transparent 100%);
+  background-repeat: no-repeat;
+  animation: scan 7.5s linear 0s infinite;
+}
+
+@keyframes scan {
+  0%        { background-position: 0 -100vh; }
+  35%, 100% { background-position: 0 100vh; }
+}
+
+.terminal {
+  box-sizing: inherit;
+  position: absolute;
+  height: 100%;
+  width: 1000px;
+  max-width: 100%;
+  padding: 4rem;
+  text-transform: uppercase;
+}
+
+.output {
+  color: rgba(128, 255, 128, 0.8);
+  text-shadow:
+      0 0 1px rgba(51, 255, 51, 0.4),
+      0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+.output::before {
+  content: "> ";
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a::before {
+  content: "[";
+}
+
+a::after {
+  content: "]";
+}
+
+.errorcode {
+  color: white;
+}
