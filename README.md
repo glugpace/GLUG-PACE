@@ -32,3 +32,5 @@ Contributions to this project shall be done using Pull Requests(PR) only!, so th
 - [Marzooq Abbas](https://github.com/Marzooq13579)
 - [Arkaan Sayed](https://github.com/arkaanfast)
 - [Ahmed Ansad](https://github.com/Anshad007)
+- [Jabir](https://github.com/Jabir7699)
+  
