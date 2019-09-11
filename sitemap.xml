@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>https://glug-pace.tech/</loc>
+  <lastmod>2019-09-10T16:41:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://glug-pace.tech/events/</loc>
+  <lastmod>2019-09-10T16:41:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://glug-pace.tech/blog/</loc>
+  <lastmod>2019-09-10T16:41:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://glug-pace.tech/team/</loc>
+  <lastmod>2019-09-10T16:41:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://glug-pace.tech/events/tech-treasure-hunt-2/</loc>
+  <lastmod>2019-09-10T16:41:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://glug-pace.tech/events/ignite-20/</loc>
+  <lastmod>2019-09-10T16:41:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://glug-pace.tech/events/python-programming-workshop/</loc>
+  <lastmod>2019-09-10T16:41:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://glug-pace.tech/events/tech-treasure-hunt/</loc>
+  <lastmod>2019-09-10T16:41:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://glug-pace.tech/events/web-designing/</loc>
+  <lastmod>2019-09-10T16:41:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://glug-pace.tech/events/techyon/</loc>
+  <lastmod>2019-09-10T16:41:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://glug-pace.tech/events/git-&amp;-github-101/</loc>
+  <lastmod>2019-09-10T16:41:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://glug-pace.tech/events/ignite-19/</loc>
+  <lastmod>2019-09-10T16:41:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://glug-pace.tech/events/laravel-and-php/</loc>
+  <lastmod>2019-09-10T16:41:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://glug-pace.tech/events/python-programming/</loc>
+  <lastmod>2019-09-10T16:41:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://glug-pace.tech/events/bytestruck-2015/</loc>
+  <lastmod>2019-09-10T16:41:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://glug-pace.tech/blog/my-experience-of-techyon/</loc>
+  <lastmod>2019-09-10T16:41:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://glug-pace.tech/blog/fsmk-winter-camp-2k19/</loc>
+  <lastmod>2019-09-10T16:41:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://glug-pace.tech/blog/what-is-git/</loc>
+  <lastmod>2019-09-10T16:41:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://glug-pace.tech/404.html</loc>
+  <lastmod>2019-09-10T16:41:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://glug-pace.tech/index.html</loc>
+  <lastmod>2019-09-10T16:41:00+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+
+
+</urlset>
