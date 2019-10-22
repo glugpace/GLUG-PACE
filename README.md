@@ -23,6 +23,10 @@ We as part of GLUG are a group of students with an aim of spreading the idea of 
 
 Contributions to this project shall be done using Pull Requests(PR) only!, so the users must fork and clone this project to their local machines and once the user update the contents of the project send in a PR to this repository which will be verified and merged by the team leads.
 
+## Code of Conduct
+
+Glug PACEe is dedicated to building a welcoming, diverse, safe community. We expect everyone participating in this community to abide by our [**Code of Conduct**](https://glug-pace.tech/coc.html). Please read it and follow it. In this community, we work hard to build each other up and create amazing things together. 💪💜
+
 ## Newbies head over Here 👉<a href="https://viz38.github.io/First-Pull-Request/" target="_blank">CLICK!!</a>
 
 ## Meet the Contributors 🎉
