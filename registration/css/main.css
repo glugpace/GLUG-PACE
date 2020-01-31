@@ -260,12 +260,15 @@ input {
     width: 100%;
     font-size: 14px;
     font-family: inherit;
+   border-bottom: 2px solid #26d07c;
 }
-
+input:hover{
+    border-bottom :2px solid fuchsia;
+}
 .input-group {
     position: relative;
     margin-bottom: 30px;
-    border-bottom: 2px solid #ccc;
+   /* border-bottom: 2px solid #ccc;*/
 }
 
 .input-icon {
@@ -416,7 +419,7 @@ input {
 }
 
 .card-1 .card-heading {
-    background: url("../images/bg-head-02.jpg") center center/cover no-repeat;
+    background: url("../images/reg-img.jpeg") center center/cover no-repeat;
     padding-top: 210px;
 }
 
@@ -432,4 +435,14 @@ input {
         padding-top: 40px;
         padding-bottom: 40px;
     }
+}
+select{
+    background-color: #26d07c;
+    border: 6px solid transparent;
+    color: #fff;
+
+}
+
+.btn .btn--radius {
+    background-color: fuchsia;
 }
