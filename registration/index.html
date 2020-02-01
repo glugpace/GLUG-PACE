@@ -7,18 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="GNU/Linux user groups are the means of spreading the idea of free software, hardware, and philosophy in campuses. GLUGs serve as a base to technically empower yourself and interact with professionals, right from installation of Linux to hacking the kernel, web technologies like Drupal and mastering the latest python module, at the same time raising questions of self reliance.">
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
-    <title>GLUG PACE</title>
-
-    <!-- Icons font CSS-->
-    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
-    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-
-    <!-- Vendor CSS-->
-    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
-
-    <!-- Main CSS-->
+    <title>GLUG PACE - Registration</title>
     <link href="css/main.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Form -->
     <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
@@ -44,72 +36,6 @@
         </center>
     </div>
 
-    <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
-        <div class="wrapper wrapper--w680">
-            <div class="card card-1">
-                <div class="card-heading"></div>
-                <div class="card-body">
-                    <form action="https://send.pageclip.co/yU3HrlLH66LhV46IlpiGyglhkzYdI2xQ/GLUG-PACE" class="pageclip-form" method="post">
-                        <div class="input-group">
-                            <input class="input--style-1" type="text" placeholder="NAME" name="name">
-                        </div>
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <input class="input--style-1" type="text" placeholder="USN" name="usn">
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="Semester">
-                                            <option disabled="disabled" selected="selected">Sem</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                            <option>6</option>
-                                            <option>7</option>
-                                            <option>8</option>
-                                        </select>
-                                        <div class="select-dropdown"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="input-group">
-                            <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="Event">
-                                    <option disabled="disabled" selected="selected">Event</option>
-                                    <option>Event 1</option>
-                                    <option>Event 2</option>
-                                    <option>Event 3</option>
-                                </select>
-                                <div class="select-dropdown"></div>
-                            </div>
-                        </div>
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <input class="input--style-1" type="email" placeholder="EMAIL" name="Email">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-2">
-                            <div class="input-group">
-                                <input class="input--style-1" type="phone" placeholder="PHONE" name="Phone">
-                            </div>
-                        </div>
-                        <div class="p-t-20">
-                            <center><button class="btn btn--radius btn--green" type="submit">Submit</button></center>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <section id="section-three">
         <div class="container">
             <div class="info-box">
@@ -124,10 +50,203 @@
         </div>
     </section>
 
-    <!-- Jquery JS-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <!-- Vendor JS-->
-    <script src="vendor/select2/select2.min.js"></script>
+    <div class="container_f">
+        <form id="survey-form" action="https://send.pageclip.co/yU3HrlLH66LhV46IlpiGyglhkzYdI2xQ/GLUG-PACE" class="pageclip-form" method="post">
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required />
+            </div>
+            <div class="form-group">
+                <label id="phone-label" for="phone">Phone</label>
+                <input type="phone" name="phone" id="phone" class="form-control" placeholder="Enter your phone number" required />
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="number">Sem<span class="clue"></span></label
+            >
+            <input
+              type="number"
+              name="Sem"
+              id="number"
+              min="1"
+              max="8"
+              class="form-control"
+              placeholder="Sem"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <p>Event</p>
+            <select id="dropdown" name="Event" class="form-control" required>
+              <option disabled selected value>Select Event</option>
+              <option value="Event 1">Event 1</option>
+              <option value="Event 2">Event 2</option>
+              <option value="Event 3">Event 3</option>
+              <option value="Event 4">Event 4</option>
+              <option value="Event 5">Event 5</option>
+            </select>
+          </div>
+<!--    
+          <div class="form-group">
+            <p>Would you recommend freeCodeCamp to a friend?</p>
+            <label>
+              <input
+                name="user-recommend"
+                value="definitely"
+                type="radio"
+                class="input-radio"
+                checked
+              />Definitely</label
+            >
+            <label>
+              <input
+                name="user-recommend"
+                value="maybe"
+                type="radio"
+                class="input-radio"
+              />Maybe</label
+            >
+      
+            <label
+              ><input
+                name="user-recommend"
+                value="not-sure"
+                type="radio"
+                class="input-radio"
+              />Not sure</label
+            >
+          </div>
+      
+          <div class="form-group">
+            <p>
+              What is your favorite feature of freeCodeCamp?
+            </p>
+            <select id="most-like" name="mostLike" class="form-control" required>
+              <option disabled selected value>Select an option</option>
+              <option value="challenges">Challenges</option>
+              <option value="projects">Projects</option>
+              <option value="community">Community</option>
+              <option value="openSource">Open Source</option>
+            </select>
+          </div>
+      
+          <div class="form-group">
+            <p>
+              What would you like to see improved?
+              <span class="clue">(Check all that apply)</span>
+            </p>
+      
+            <label
+              ><input
+                name="prefer"
+                value="front-end-projects"
+                type="checkbox"
+                class="input-checkbox"
+              />Front-end Projects</label
+            >
+            <label>
+              <input
+                name="prefer"
+                value="back-end-projects"
+                type="checkbox"
+                class="input-checkbox"
+              />Back-end Projects</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="data-visualization"
+                type="checkbox"
+                class="input-checkbox"
+              />Data Visualization</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="challenges"
+                type="checkbox"
+                class="input-checkbox"
+              />Challenges</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="open-source-community"
+                type="checkbox"
+                class="input-checkbox"
+              />Open Source Community</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="gitter-help-rooms"
+                type="checkbox"
+                class="input-checkbox"
+              />Gitter help rooms</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="videos"
+                type="checkbox"
+                class="input-checkbox"
+              />Videos</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="city-meetups"
+                type="checkbox"
+                class="input-checkbox"
+              />City Meetups</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="wiki"
+                type="checkbox"
+                class="input-checkbox"
+              />Wiki</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="forum"
+                type="checkbox"
+                class="input-checkbox"
+              />Forum</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="additional-courses"
+                type="checkbox"
+                class="input-checkbox"
+              />Additional Courses</label
+            >
+          </div>
+      
+          <div class="form-group">
+            <p>Any comments or suggestions?</p>
+            <textarea
+              id="comments"
+              class="input-textarea"
+              name="comment"
+              placeholder="Enter your comment here..."
+            ></textarea>
+          </div>
+-->
+      
+          <div class="form-group">
+            <center><button type="submit" id="submit" class="submit-button">
+              Submit
+            </button></center>
+          </div>
+        </form>
+      </div>
 
     <!-- Form JS-->
     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
