@@ -2,7 +2,7 @@
     <img src="images/logo.png" alt="GlugPace Logo" width="200px" height="200px"/>
  </p>
 
-# GLUG PACE [Website](https://glug-pace.tech/)🚀
+# GLUG PACE [Website](https://glugpace.tech/)🚀
 
 GLUG PACE is a group of people who works for FOSS. This project is the Official website for the GLUG PACE Community.
 Find out more information at [glugpace](https://github.com/GLUG-PACE/).
