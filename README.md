@@ -41,3 +41,4 @@ Glug PACEe is dedicated to building a welcoming, diverse, safe community. We exp
 - [Abdul Raouf](https://github.com/abdulraouf9567)
 - [Sharon M](https://github.com/Aizen2499)
 - [Munawir Elambilat](https://github.com/Ugly-Duckling14)
+- [Anisha Begum](https://github.com/Anisha7860)
