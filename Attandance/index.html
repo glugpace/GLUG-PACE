@@ -7,13 +7,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="GNU/Linux user groups are the means of spreading the idea of free software, hardware, and philosophy in campuses. GLUGs serve as a base to technically empower yourself and interact with professionals, right from installation of Linux to hacking the kernel, web technologies like Drupal and mastering the latest python module, at the same time raising questions of self reliance.">
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
-    <title>GLUG PACE - Feedback</title>
+    <title>GLUG PACE - Attandance</title>
     <link href="css/main.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Form -->
     <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+    <!--
+    <script type="text/javascript">
+        function checkvalue(val) {
+            if (val === "Introduction to Technology")
+                document.getElementById('drop').style.display = 'block';
+            else
+                document.getElementById('drop').style.display = 'none';
+        }
+    </script>
+-->
 </head>
 
 <body>
@@ -32,7 +42,7 @@
 
     <div class="container padding">
         <center>
-            <h1>Feedback Form</h1>
+            <h1>WEB DEV Attandance</h1>
         </center>
     </div>
 
@@ -42,7 +52,7 @@
                 <h1 class="hero-heading">Code of Conduct</h1>
                 <p>The rules, guidelines, and code of conduct apply to all the Core Members, volunteers and participants, although subgroups may also extend these to better serve their own community. This isn't an exhaustive list of things that you can't
                     do. Rather, take it in the spirit in which it's intended — a guide to make it easier to be excellent to each other. We expect it to be followed in spirit as much as in the letter.</p>
-                <a href="coc.html" class="link">Learn More &#8594;</a>
+                <a href="../coc.html" class="link">Learn More &#8594;</a>
             </div>
             <div class="info-box">
                 <img src="../images/reg2.png" alt="" />
@@ -51,13 +61,14 @@
     </section>
 
     <div class="container_f">
-        <center>
-            <p>Note: The feedback provided will be used for internal development and further improvement purposes only.</p>
-        </center>
-        <form action="https://send.pageclip.co/yU3HrlLH66LhV46IlpiGyglhkzYdI2xQ/Feedback" class="pageclip-form" method="post">
+        <form action="https://send.pageclip.co/yU3HrlLH66LhV46IlpiGyglhkzYdI2xQ/AttDay2" class="pageclip-form" method="post">
             <div class="form-group">
-                <label id="email-label" for="email">Message</label>
-                <input type="text" name="Message" id="message" class="form-control" placeholder="Enter your feedback" required></input>
+                <label id="name-label" for="name">Name</label>
+                <input type="text" name="Name" id="name" class="form-control" placeholder="Enter your name" required />
+            </div>
+            <div class="form-group">
+                <label id="phone-label" for="USN">USN</label>
+                <input type="phone" name="USN" id="phone" class="form-control" placeholder="Enter your USN" required />
             </div>
             <div class="form-group">
                 <p>Sem</p>
@@ -74,10 +85,28 @@
                 </select>
             </div>
             <div class="form-group">
-                <p>Event</p>
-                <select id="dropdown" name="Event" class="form-control" required>
-                    <option disabled selected value>Select Event</option>
-                   <option value="Ignite 21">Web Dev (HTML & CSS)</option>
+                <p>Department</p>
+                <select id="dropdown" name="Department" class="form-control" required>
+                    <option disabled selected value>Select Department</option>
+                    <option value="CSE">CSE</option>
+                    <option value="Mechanical">Mechanical</option>
+                    <option value="Civil">Civil</option>
+                    <option value="EC">EC</option>
+                    <option value="EEE">EEE</option>
+                    <option value="Physiotherapy">Physiotherapy</option>
+                    <option value="Polytechnic">Polytechnic</option>
+                    <option value="MBA">MBA</option>
+                    <option value="Bio Technology">Bio Technology</option>
+                    <option value="Degree">Degree</option>
+                    <option value="Pharmacy">Pharmacy</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>Attandance</p>
+                <select id="dropdown" name="Att" class="form-control" onchange='checkvalue(this.value)' required>
+                    <option disabled selected value>Select Session</option>
+                    <option value="JS 1">JS 1</option>
                 </select>
             </div>
             <div class="form-group">
