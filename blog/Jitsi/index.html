@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+    <title>GLUG PACE - Blender: A FOSS 3D creation suite </title>
+    <meta name="description" content="VSCodium is a community-driven,freely-driven,freely-licensed binary distribution of Microsoft's editor VSCode">
+    <link rel="stylesheet" href="../../css/style.css ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        span {
+              font-size: 25px;
+        }
+        pre {
+            overflow: scroll;
+        }
+
+        code {
+            background-color: #eee;
+            border-radius: 3px;
+            font-family: Courier, monospace;
+            padding: 0 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="container">
+            <a href='/' id="logo">GLUG PACE</a>
+            <ul class="navbar-links">
+                <li class="nav-link"><a href='/events/'>Events</a></li>
+                <li class="nav-link"><a href='/blog/'>Blog</a></li>
+                <li class="nav-link"><a href='/team/'>Team</a></li>
+                <li class="nav-link"><a href='/coc.html'>CoC</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Read post section -->
+    <div class="container padding">
+        <div class="data-content">
+            <img class="data-image" src="images/jitsi-meet.jpg" alt="" />
+            <div class="data-desc">
+                <h1 class="data-heading">JITSI Meet</h1>
+                <p class="data-author">Published by <b>Mohammed Unais</b></p>
+                <hr>
+                <div class="data-body">
+                    <h3><u>What is jitsi?</u></h3>
+                        <p>Jitsi is a collection of free and open source multiplatform voice(VoIP), videoconferencing and instant messaging applications for the web platform, Windows, Linux, macOS, iOS and Android.The Jitsi project began with the Jitsi Desktop (previously known as SIP Communicator). With the growth of Webrtc the project team focus shifted to the Jitsi Videobridge for allowing web-based multi-party video calling. Later the team added Jitsi Meet, a full video conferencing application that includes web, Android, and iOS clients. Jitsi also operates meet.jit.si, a version of Jitsi Meet hosted by Jitsi for free community use. Other projects include : Jigasi, lib-jitsi-meet, Jidesha, and Jitsi.</p>
+
+                    <h3><u>Why Jitsi?</u></h3>
+                    <h4>The key advantages of using Jitsi video conferencing :</h4>
+                        <ul>
+                            
+                            <li>Open-source solution provided for free and with a wide community support.</li>
+                            <li>Installation in one click and easy setup.</li>
+                            <li>User-friendly process of arranging video and audio calls, as well as multi-meeting rooms.</li>
+                            <li>High level of privacy and security due to deployment inside isolated containers with encrypted traffic.</li>
+                            <li>A wide choice of service providers across different countries to host the application locally.</li>
+                            <li>Support of all available clients (Windows, Linux, Mac, iOS, Android).</li>
+                            <li>In this article we’ll share the details of how to get Jitsi up and running with Jelastic PaaS in order to achieve full control over your data, secure hosting in local datacenter and meet no need in manual installation with complex maintenance. Follow the steps below and get your own self-hosted video conferencing application in minutes.</li>
+                        </ul>
+
+                    <h3><u>Installation guide :</u></h3>
+                        <h4><u>Install and setup Jitsi on Windows :
+                        </u></h4>
+                            <p>At the time of writing, you’ll need Windows 7 or newer to run the latest stable version of GIMP.</p>
+                            <p>If you’re on Windows, and you don’t know what operating system you’re using (ie Windows7, Windows XP, etc.) follow these instructions to find out which operating system you’re running :</p>
+                            <ol>
+                                    <li>Visit <a href="https://desktop.jitsi.org/index.html">this</a> Jitsi Download page.</li><br>
+
+                                    <li>Click on the “Microsoft Windows Installers (32-bit version).” If you know that you have 64-bit Windows you can click on the “64-bit version” instead.
+                                    </li><br>
+
+                                    <li>Start the process by clicking “Run”.</li><br>
+
+                                    <li>When the installer starts it takes a moment to check for available space and then shows the welcome screen. Click “Next” to continue.
+                                    </li> <br>
+                                    
+                                    <li>Check “I accept the terms in the License Agreement” and click “Next”.</li><br>
+
+                                    <li>.Click “Next” to continue.</li><br>
+
+                                    <li>Create Shortcuts: Leave the items checked to create shortcuts to Jitsi in the Start Menu and on the Desktop. You can also choose to have Jitsi start automatically when you log in. Associate Protocols: Leave “SIP” and “XMPP” checked in order to let Jitsi take calls and chat sessions when you click on special web links. You may be familiar with links for web pages that start with http://. Any links that start with sip: or xmpp: will open in Jitsi. Click “Next” to continue.
+                                    </li><br>
+
+                                    <li>Click “Install”. Windows may display a warning to let you know that software is being installed. Press “Yes” to continue.
+                                    </li><br>
+
+                                    <li>The installation takes a few minutes, but eventually it lets you know that it completed the installation. Click “Finish”.
+                                    </li><br>
+
+                                    <li>Jitsi will launch automatically. But to open it in the future, double click on the Jitsi shortcut on the desktop.</li><br>
+                                
+                            </ol><br><hr><br>
+
+                    <h3><u>Install and setup Jitsi on Ubuntu :</u></h3>
+                        <ol>
+                            <li>SSH into your server as root.</li><br>
+
+                            <li>Install the Jitsi repository key: <br>
+                                <pre><code>wget -qO - https://download.jitsi.org/jitsi-key.gpg.key | sudo apt-key add -</code></pre>
+                            </li><br>
+
+                            <li>Create a new repository sources file - sources.list.d – for the Jitsi repo: <br>
+                                <pre><code>sudo sh -c "echo 'deb https://download.jitsi.org stable/' > /etc/apt/sources.list.d/jitsi-stable.list"</code></pre></li><br>
+
+                            <li>nstall apt-transport-https to access packages with an SSL (HTTPS) connection: <br>
+                                <pre><code>apt-get install apt-transport-https</code></pre>
+                            </li><br>
+                            
+                            <li>Update your Ubuntu server package lists: <br>
+                                <pre><code>sudo apt-get -y update</code></pre>
+                            </li><br>
+
+                            <li>Install the Jitsi Meet full suite: <br>
+                                <pre><code>sudo apt-get -y install jitsi-meet</code></pre>
+                            </li><br>
+
+                            <li>When prompted, type your intended hostname or domain for the Jitsi URL.</li><br>
+                            
+                            <li>Choose to use self-signed SSL (Let’s Encrypt) or your own preinstalled SSL.</li>
+                        
+                        </ol><br><hr><br>
+
+                    <h3><u>First use : </u> </h3>
+                    <ul>
+                        <li>The first time you run Jitsi, you may get a warning from your firewall. If you click “Cancel” Jitsi can still communicate through public servers such as Google Chat, Facebook, and Yahoo Messenger. However, clicking “Allow access” enables an advanced feature known as registrarless SIP accounts.
+                        </li><br>
+
+                        <li>Jitsi lets you log into several chat accounts at once. Fill out the username and password for the accounts you already have. If you don’t have any accounts with the providers listed, create a new account by clicking on one of the “Not registered yet” links. After filling in the username and and passwords for the accounts you want to use, click “Sign in.”</li><br>
+                            
+                        <li>Wait a moment for Jitsi to connect. When the status changes to “Online”, you are ready to chat!</li> 
+
+                   
+                    </ul><br>
+
+                    <h3><u>Create meeting in Ubuntu : </u></h3>
+                    <ol>
+                        <li>After installing Jitsi Meet, visit your Jitsi URL to create a video conference.
+                        </li><br>
+                        <li>In the upper-right corner, select the Settings icon.
+                        </li><br>
+                        <li>Here you can configure your camera, microphone, display name, Gravatar email, and language settings.
+                        </li><br>
+                        <li>Select OK to save changes.
+                        </li><br>
+                        <li>Add a meeting name and select GO to create a Jitsi meeting.
+                        </li><br>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-box">
+                <h1>GLUG PACE</h1>
+                <p>GNU AND LINUX USERS GROUP PACE, <br /> A subgroup of (FSMK) <br /> Free Software Movement Karnataka.</p>
+            </div>
+            <div class="footer-box">
+                <h1>Open Source Community</h1>
+                <a href="http://instagram.com/glugpace" class="fa fa-instagram"></a>
+                <a href="https://twitter.com/GlugPace" class="fa fa-twitter"></a>
+                <a href="https://github.com/GLUGPACE/" class="fa fa-github"></a>
+            </div>
+            <div class="footer-box">
+                <h1>P A College of Engineering</h1>
+                <p>Nadupadav, Montepadav Post <br /> Kairangala <br /> Mangalore - 574153 <br /> Karnataka, INDIA.
+                </p>
+            </div>
+        </div>
+        <hr style="border: 0.5px solid white;" />
+        <div align="center">
+            Made with <span style="color: #e25555;">&hearts;</span> GLUG PACE
+        </div>
+    </footer>
+</body>
+
+</html>
