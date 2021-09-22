@@ -2,7 +2,7 @@
     <img src="images/logo.png" alt="GlugPace Logo" width="200px" height="200px"/>
  </p>
 
-# GLUG PACE [Website](https://glugpace.tech/)🚀
+# GLUG PACE [Website](https://glugpace.live/)🚀
 
 GLUG PACE is a group of people who works for FOSS. This project is the Official website for the GLUG PACE Community.
 Find out more information at [glugpace](https://github.com/GLUG-PACE/).
@@ -23,7 +23,7 @@ Contributions to this project shall be done using Pull Requests(PR) only!, so th
 
 ## Code of Conduct
 
-Glug PACEe is dedicated to building a welcoming, diverse, safe community. We expect everyone participating in this community to abide by our [**Code of Conduct**](https://glug-pace.tech/coc.html). Please read it and follow it. In this community, we work hard to build each other up and create amazing things together. 💪💜
+Glug PACEe is dedicated to building a welcoming, diverse, safe community. We expect everyone participating in this community to abide by our [**Code of Conduct**](https://glugpace.live/coc.html). Please read it and follow it. In this community, we work hard to build each other up and create amazing things together. 💪💜
 
 ## Newbies head over Here 👉<a href="https://viz38.github.io/First-Pull-Request/" target="_blank">CLICK!!</a>
 
@@ -41,4 +41,5 @@ Glug PACEe is dedicated to building a welcoming, diverse, safe community. We exp
 - [Abdul Raouf](https://github.com/abdulraouf9567)
 - [Sharon M](https://github.com/Aizen2499)
 - [Munawir Elambilat](https://github.com/Ugly-Duckling14)
+- [Hassan Mashmoom](https://github.com/hassanmash)
 - [Anisha Begum](https://github.com/Anisha7860)
