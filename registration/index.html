@@ -52,7 +52,7 @@
                 <h1 class="hero-heading">Code of Conduct</h1>
                 <p>The rules, guidelines, and code of conduct apply to all the Core Members, volunteers and participants, although subgroups may also extend these to better serve their own community. This isn't an exhaustive list of things that you can't
                     do. Rather, take it in the spirit in which it's intended — a guide to make it easier to be excellent to each other. We expect it to be followed in spirit as much as in the letter.</p>
-                <a href="coc.html" class="link">Learn More &#8594;</a>
+                <a href="../coc.html" class="link">Learn More &#8594;</a>
             </div>
             <div class="info-box">
                 <img src="../images/reg2.png" alt="" />
@@ -74,6 +74,10 @@
                 <label id="phone-label" for="phone">Phone</label>
                 <input type="phone" name="Phone" id="phone" class="form-control" placeholder="Enter your phone number" required />
             </div>
+              <!-- <div class="form-group">
+                <label id="college-label" for="college">College</label>
+                <input type="text" name="College" id="college" class="form-control" placeholder="Enter your College name" required />
+            </div> -->
             <div class="form-group">
                 <p>Sem</p>
                 <select id="dropdown" name="Event" class="form-control" required>
@@ -82,23 +86,49 @@
                     <option value="2nd Sem">2nd Sem</option>
                     <option value="3rd Sem">3rd Sem</option>
                     <option value="4th Sem">4th Sem</option>
-                    <option value="5th Sem">5th Sem</option>
+                    <option value="5th Sem">5th Sem</option> 
                     <option value="6th Sem">6th Sem</option>
                     <option value="7th Sem">7th Sem</option>
                     <option value="8th Sem">8th Sem</option>
                 </select>
             </div>
             <div class="form-group">
+                <p>Department</p>
+                <select id="dropdown" name="Department" class="form-control" required>
+                    <option disabled selected value>Select Department</option>
+                    <option value="CSE">CSE</option>
+                    <option value="Mechanical">Mechanical</option>
+                    <option value="Civil">Civil</option>
+                    <option value="EC">EC</option>
+                    <option value="EEE">EEE</option>
+                    <option value="Physiotherapy">Physiotherapy</option>
+                    <option value="Polytechnic">Polytechnic</option>
+                    <option value="MBA">MBA</option>
+                    <option value="Bio Technology">Bio Technology</option>
+                    <option value="Degree">Degree</option>
+                    <option value="Pharmacy">Pharmacy</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
                 <p>Event</p>
                 <select id="dropdown" name="Event" class="form-control" onchange='checkvalue(this.value)' required>
-                    <option disabled selected value>Select Event</option>
-                    <option value="BELLES-LETTRES">BELLES-LETTRES</option>
-                    <option value="TRYST">TRYST</option>
-                    <option value="CODATHON">CODATHON</option>
-<!--                    <option value="Event 4">Event 4</option>
-                    <option value="Event 5">Event 5</option>
--->         </select>
+                    <option selected value>Select Event</option>
+                    <option value="Codathon">Codathon</option>
+                    <option value="Tryst">Tryst</option>
+                    <option value="Belles-Lettres">Belles-Lettres</option>
+
+
+                </select>
             </div>
+            <!-- div class="form-group">
+                <p>Do you own a laptop?</p>
+                <select id="dropdown" name="Laptop" class="form-control" required>
+                    <option disabled selected value>Select</option>
+                    <option value="YES">Yes</option>
+                    <option value="NO">No</option>
+                </select>
+            </div -->
             <!--
             <div id='drop' style='display:none'>
                 <div class="form-group">
@@ -134,7 +164,7 @@
     <div class="container">
         <div class="footer-box">
             <h1>GLUG PACE</h1>
-            <p>GNU AND LINUX USERS GROUP PACE, <br /> A subgroup of (FSMK) <br /> Free Software Movement Karnataka.</p>
+            <p>GNU AND LINUX USERS GROUP PACE, <br /> A subgroup of (FSMK) <br /> <a href="https://fsmk.org/" style="font-size: 1em;"> Free Software Movement Karnataka.</a></p>
         </div>
         <div class="footer-box">
             <h1>Open Source Community</h1>
