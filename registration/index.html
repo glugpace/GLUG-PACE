@@ -61,8 +61,13 @@
     </section>
 
     <div class="container_f">
-        <form action="../404.html">
+<!--    Form when registration Not Active! -->
+        <form action="#">
+            
+<!--             Form when registration Active! -->
 <!--         <form action="https://send.pageclip.co/AYWaoiBm02QQPhL1rZyzueo6NcAFRAgq" class="pageclip-form" method="post"> -->
+            
+            
             <div class="form-group">
                 <label id="name-label" for="name">Name</label>
                 <input type="text" name="Name" id="name" class="form-control" placeholder="Enter your name" required />
@@ -152,14 +157,18 @@
                     <button type="submit" id="submit" class="submit-button pageclip-form__submit">Submit</button>
                 </center>
             </div> -->
+            
+<!--             Button for registration when Open! -->
 <!--             <div class="form-group">
                 <button class="submit-button button pageclip-form__submit" type="submit">
                     <span>Submit</span>
                 </button>
             </div> -->
+            
+<!--             Button for registration when closed! -->
             <div class="form-group">
                 <center>
-                    <button class="submit-button" type="submit" id="submit">Submit</button>
+                    <button class="submit-button" id="submit" onclick="noRegPage()">Submit</button>
                 </center>
             </div>
         </form>
@@ -167,7 +176,7 @@
 
     <!-- Form JS-->
     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
-
+    <script src="./noreg.js"></script>
 </body>
 
 <!-- Footer -->
