@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+    <title>GLUG PACE - How to install VSCodium?</title>
+    <meta name="description" content="VSCodium is a community-driven,freely-driven,freely-licensed binary distribution of Microsoft's editor VSCode">
+    <link rel="stylesheet" href="../../css/style.css ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        span {
+              font-size: 25px;
+        }
+        pre {
+            overflow: scroll;
+        }
+
+        code {
+            background-color: #eee;
+            border-radius: 3px;
+            font-family: Courier, monospace;
+            padding: 0 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="container">
+            <a href='/' id="logo">GLUG PACE</a>
+            <ul class="navbar-links">
+                <li class="nav-link"><a href='/events/'>Events</a></li>
+                <li class="nav-link"><a href='/blog/'>Blog</a></li>
+                <li class="nav-link"><a href='/team/'>Team</a></li>
+                <li class="nav-link"><a href='/coc.html'>CoC</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Read post section -->
+    <div class="container padding">
+        <div class="data-content">
+            <img class="data-image" src="images/img2.png" alt="" />
+            <div class="data-desc">
+                <h1 class="data-heading">How to install VSCodium?</h1>
+                <p class="data-author">Published by <b>Zidan Mohammed</b></p>
+                <hr>
+                <div class="data-body">
+                    <p>Microsoft’s vscode source code is open source (MIT-licensed), but the product available for download (Visual Studio Code) is licensed under this not-FLOSS license and contains telemetry/tracking. According to this comment from a Visual Studio Code maintainer:</p>
+
+                    <p>When we [Microsoft] build Visual Studio Code, we do exactly this. We clone the vscode repository, we lay down a customized product.json that has Microsoft specific functionality (telemetry, gallery, logo, etc.), and then produce a build that we release under our license.</p>
+                    
+                    <p>When you clone and build from the vscode repo, none of these endpoints are configured in the default product.json. Therefore, you generate a “clean” build, without the Microsoft customizations, which is by default licensed under the MIT license</p>
+
+                    <p>The VSCodium project exists so that you don’t have to download+build from source. This project includes special build scripts that clone Microsoft’s vscode repo, run the build commands, and upload the resulting binaries for you to GitHub releases. These binaries are licensed under the MIT license. Telemetry is disabled.</p>
+
+                    <h3><u>Installation guide:</u></h3>
+
+                    <ol>
+                        <li>First you need CHOCOLATEY or SCOOP to install the VSCodium on WINDOWS.</li>
+
+                        <li>here,we use CHOCOLATEY: <br>To Install Chocolatey:</li>
+                        <ol>
+                            <li>Right click on the start button and run (Command Prompt or Powershell) as administrator.(Powershell is recommended) <br>
+                            -To Install Powershell watch the easy method on <span>&#128073;</span><a href="https://www.youtube.com/watch?v=49kPjjM8r8o">YouTube</a></li>
+
+                            <li>Copy-<pre><code>Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))</code></pre>-and paste it in your shell.</li>
+                            <li>Wait a few seconds for the command to complete.</li>
+
+                            <li>If you don't see any errors, you are ready to use Chocolatey! Type choco or choco -? now, or see Getting Started for usage instructions.</li>
+                        </ol>
+
+                        <li>so in order for CHOCOLATEY to work, CLOSE and REOPEN the POWERSHELL (AS ADMIN).</li>
+
+                        <li>copy the command- <code>choco install vscodium</code> -and paste in your shell.</li>
+
+                        <li>wait for few seconds for installation to complete. <br>after successful completion, close the shell.</li>
+                    </ol>
+
+                    <h3><u>C/C++ setup:</u></h3>
+                    <h4><u>Now lets install a toolset for C/C++:</u></h4>
+                    <ol>
+                        <li>We are going to use gnu/gcc toolset for C, C++ which is known as MinGW in Windows.</li>
+                        <li>Download and install MinGW from-<a href="https://osdn.net/projects/mingw/downloads/68260/mingw-get-setup.exe/"> here</a> <br>
+                             Must watch<a href="https://www.youtube.com/watch?v=guM4XS43m4I"> this </a>tutorial for error free installation and path variable setting.</li>
+                        <li>After the installation run command prompt and type- <code>gcc --version</code>, and if shows any compiler (minGW) as installed, then it’s good to go.</li>    
+                    </ol>
+
+                    <h4><u>After the above steps let’s prepare for the first program:</u></h4>
+                    <ol>
+                        <li>Open VSCodium from apps.</li>
+                        <li>Create a workspace folder (Ex: C C++), and select the folder.</li>
+                        <li>Click on files and save the workspace as (Ex: C Programming, etc..).</li>
+                        <li>Open extension marketplace and install (Code Runner) and any other extensions you need.</li>
+                        <li>Now you ready to create your first program.</li>
+                        <li>For the click on New File under the desired workspace.</li>
+                        <li>You run your first program your output will be displayed in the output section where you can’t give any inputs.</li>
+                        <li>So to fix that go to file>preferences>settings>extensions>Run Code configurations and turn on ‘Run In Terminal’ option.</li>
+                        <li>Save the settings.</li>
+                        <li>Do your first program in which you can give the inputs in the terminal section, compile (gcc sample.c), if there are no errors, then run the program (Ctrl+Alt+N).</li>
+                    </ol>
+
+                    <h3><u>Python Setup:</u></h3>
+                    <ol>
+                        <li>We have to install Python 3 software on our system.</li>
+                        <li>Use<a href="https://www.youtube.com/watch?v=dNFgRUD2w68"> this </a>video to follow along for an error free installation of Python 3 and path variable setting.</li>
+                        <li>After the installation run command prompt and type <code>python</code>  and if it shows any compiler (python 3) as installed, then it’s good to go.</li>
+                        <li>After the process, let’s open VSCodium and install required extensions as shown in the video above.</li>
+                        <li> And fix all the problems carefully. <br> Note: In the latest version, the debug fix is NOT required (in some devices).</li>
+                        <li> You are then ready to go. <br> (To run a program, we set a default debug confg.)</li>
+                    </ol>
+                    <hr>
+
+                    <h3><u>Install with Brew (Mac):</u></h3>
+                    <ol>
+                        <li>Open command terminal(enter the following command):<br>Install Homebrew (If homebrew is already installed skip  step 2)</li>
+                        <li> <pre><code> /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" </code></pre></li>
+                        <li>brew cask install vscodium</li>
+                    </ol><hr>
+
+                    <h3><u>Linux:</u></h3>
+                    <p>VSCodium is pre-installed in Parrot OS. In case you don’t find it by default, you can retrieve it from the official Parrot repo</p>
+                    <p>Open Command Terminal(type the following command)<br>
+                       <code>sudo apt update</code>  && <code>sudo apt install vscodium</code></p>
+
+                    <h3><u>Debian / Ubuntu (deb package):</u></h3> 
+                    <ol>
+                        <li>Open Command Terminal(type the following command)<br> Add the GPG key of the repository:<br>
+                           <pre><code>wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | sudo apt-key add –</code></pre></li>
+                        <li>Add the repository:<br>
+                           <pre><code>echo 'deb https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs/ vscodium main' | sudo tee --append /etc/apt/sources.list.d/vscodium.list</code></pre></li>   
+                        <li>Update then install vscodium:<br>
+                           <code>sudo apt update && sudo apt install codium</code></li>
+                    </ol>
+                    
+                    <h3><u>Fedora / Centos / OpenSUSE (rpm package):</u></h3>
+                    <ol>
+                        <li>Open Command Terminal(type the following command)<br>Add the GPG key of the repository:<br>
+                           <pre><code>sudo rpm --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg</code></pre></li>
+
+                        <li>Add the repository:<br> For Fedora/RHEL:<br>
+                           <pre><code>printf "[gitlab.com_paulcarroty_vscodium_repo]\nname=gitlab.com_paulcarroty_vscodium_repo\nbaseurl=https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/rpms/\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg" |sudo tee -a /etc/yum.repos.d/vscodium.repo</code></pre></li>
+
+                        <li>For openSUSE/SUSE:<br>
+                           <pre><code>printf "[gitlab.com_paulcarroty_vscodium_repo]\nname=gitlab.com_paulcarroty_vscodium_repo\nbaseurl=https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/rpms/\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg" |sudo tee -a /etc/zypp/repos.d/vscodium.repo</code></pre></li>
+
+                        <li>Install the software:<br>For Fedora/RHEL:<br>
+                           <code>sudo dnf install codium</code></li>
+
+                        <li>For openSUSE/SUSE:<br>
+                            <code>sudo zypper in codium</code></li>
+                    </ol>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-box">
+                <h1>GLUG PACE</h1>
+                <p>GNU AND LINUX USERS GROUP PACE, <br /> A subgroup of (FSMK) <br /> <a href="https://fsmk.org/" style="font-size: 1em;"> Free Software Movement Karnataka.</a></p>
+            </div>
+            <div class="footer-box">
+                <h1>Open Source Community</h1>
+                <a href="http://instagram.com/glugpace" class="fa fa-instagram"></a>
+                <a href="https://twitter.com/GlugPace" class="fa fa-twitter"></a>
+                <a href="https://github.com/GLUGPACE/" class="fa fa-github"></a>
+            </div>
+            <div class="footer-box">
+                <h1>P A College of Engineering</h1>
+                <p>Nadupadav, Montepadav Post <br /> Kairangala <br /> Mangalore - 574153 <br /> Karnataka, INDIA.
+                </p>
+            </div>
+        </div>
+        <hr style="border: 0.5px solid white;" />
+        <div align="center">
+            Made with <span style="color: #e25555;">&hearts;</span> GLUG PACE
+        </div>
+    </footer>
+</body>
+
+</html>
