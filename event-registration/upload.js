@@ -4,6 +4,7 @@ var form = document.getElementById('sheetdb-form');
 let url = "https://script.google.com/macros/s/AKfycbycueg95dXr4uMkHAAGUOCQBdjeAqFck2qWiqiD9X2l3mbvL2MBlMzpGMlRGC7XlU93mg/exec";
 form.addEventListener("submit", e => {
   e.preventDefault();
+<<<<<<< HEAD
   // Swal.fire({
   //   title: 'Loading...',
   //   allowEscapeKey: false,
@@ -27,6 +28,19 @@ form.addEventListener("submit", e => {
   console.log(data);
   Swal.fire('Uploading please wait for a moment')
   fetch(url, {
+=======
+//   Swal.fire({
+//     title: 'Loading...',
+//     allowEscapeKey: false,
+//     allowOutsideClick: false,
+//     showConfirmButton: false,
+//     didOpen: () => {
+//       Swal.showLoading();
+//     }
+//   });
+  // console.log(e);
+  fetch(form.action, {
+>>>>>>> a8532bcc7b3f4d94d3672c4a4b23fa08ce235e40
       method : "POST",
       body:JSON.stringify(data)
       // body: new FormData(document.getElementById("sheetdb-form")),
@@ -34,6 +48,7 @@ form.addEventListener("submit", e => {
   }).then(
       response => response.text()
   ).then((html) => {
+<<<<<<< HEAD
     Swal.fire(
       'Thank you for registoring',
       'your information is successfully stored',
@@ -48,11 +63,23 @@ form.addEventListener("submit", e => {
     //   form.reset();
     //   window.open('success.html','_self')
     // })
+=======
+      alert("Success");
+//     fetch(url,{
+//       method:"POST",
+//       body:JSON.stringify(obj)
+//     })
+//     .then(r => r.text())
+//     .then(data => {
+//       form.reset();
+//       window.open('success.html','_self')
+//     })
+>>>>>>> a8532bcc7b3f4d94d3672c4a4b23fa08ce235e40
   });
   document.getElementById("sheetdb-form").reset();
 });
 
-
+/*
 let file = document.getElementById('picture');
 let obj;
 let res,spt;
@@ -72,6 +99,7 @@ file.addEventListener('change',()=>{
   })
   fr.readAsDataURL(file.files[0]);
 })
+*/
 
 
 console.log("hiii")
