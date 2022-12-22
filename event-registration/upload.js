@@ -53,26 +53,26 @@ var form = document.getElementById('sheetdb-form');
 // });
 
 
-let file = document.getElementById('picture');
-let obj;
-let res,spt;
-file.addEventListener('change',()=>{
-  let fr = new FileReader;
-  fr.addEventListener('loadend',()=>{
-    res = fr.result;
-    spt = res.split("base64,")[1];
-    obj = {
-      base64:spt,
-      type:file.files[0].type,
-      name:file.files[0].name
-    }
-    // let a = JSON.stringify(obj);
-    // let b = JSON.parse(a);
-    // console.log(b.type)
-  })
-  fr.readAsDataURL(file.files[0]);
-})
+// let file = document.getElementById('picture');
+// let obj;
+// let res,spt;
+// file.addEventListener('change',()=>{
+//   let fr = new FileReader;
+//   fr.addEventListener('loadend',()=>{
+//     res = fr.result;
+//     spt = res.split("base64,")[1];
+//     obj = {
+//       base64:spt,
+//       type:file.files[0].type,
+//       name:file.files[0].name
+//     }
+//     // let a = JSON.stringify(obj);
+//     // let b = JSON.parse(a);
+//     // console.log(b.type)
+//   })
+//   fr.readAsDataURL(file.files[0]);
+// })
 
 
 
-console.log("hiii")
+// console.log("hiii")
