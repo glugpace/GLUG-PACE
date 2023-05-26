@@ -15,7 +15,7 @@ Free and open-source software's are software's that can be classified as both Fr
 
 GLUG [PACE](https://pace.edu.in/) (GNU/LINUX USERS GROUP) is a part of [FSMK](https://fsmk.org) (Free Software Movement Karnataka), a registered not-for-profit organization with a primary objective is to create and spread awareness of Free Software technologies in different strata of society.
 
-We as part of GLUG are a group of students with an aim of spreading the idea of free software, hardware, and philosophy in campuses.
+We as part of GLUG are a group of students with an aim of spreading the idea of free software, hardware and philosophy in campuses.
 
 ## Contribution
 
@@ -23,7 +23,7 @@ Contributions to this project shall be done using Pull Requests(PR) only!, so th
 
 ## Code of Conduct
 
-Glug PACEe is dedicated to building a welcoming, diverse, safe community. We expect everyone participating in this community to abide by our [**Code of Conduct**](https://glugpace.live/coc.html). Please read it and follow it. In this community, we work hard to build each other up and create amazing things together. 💪💜
+Glug PACE is dedicated to building a welcoming, diverse, safe community. We expect everyone participating in this community to abide by our [**Code of Conduct**](https://glugpace.live/coc.html). Please read it and follow it. In this community, we work hard to build each other up and create amazing things together. 💪💜
 
 ## Newbies head over Here 👉<a href="https://viz38.github.io/First-Pull-Request/" target="_blank">CLICK!!</a>
 
