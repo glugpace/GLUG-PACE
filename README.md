@@ -47,3 +47,4 @@ Glug PACE is dedicated to building a welcoming, diverse, safe community. We expe
 - [Mohammed Nouman](https://github.com/nou-man)
 - [Azlan](https://github.com/azlanajju)
 - [Rabeeh T A](https://github.com/rabeeh-ta)
+- [Sheik Rifaz Ali](https://github.com/rifaz124)
