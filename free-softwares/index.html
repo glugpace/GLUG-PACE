@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <title>GLUG PACE - Team</title>
+    <meta name="description" content="The official team of GNU/Linux User Group PACE.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        emailjs.init("eIJEe01xPJkDvzcOA");  // Replace with your USER_ID
+    </script>
+
+
+    <style>
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-dialog {
+            width: 50%;
+            max-width: 600px;
+            margin: 100px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-header {
+            padding: 15px;
+            background-color: rgb(102, 51, 153);
+            color: #fff;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+        }
+
+        .modal-body {
+            padding: 20px;
+        }
+
+        .btn-close {
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .btn-close:hover {
+            color: #e25555;
+        }
+
+        /* Form inside the modal */
+        #softwareForm {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: rgb(102, 51, 153);
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(102, 51, 153);
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <!-- ======= Header ======= -->
+    <header>
+        <nav class="container">
+            <a href='/' id="logo">GLUG PACE</a>
+            <ul class="navbar-links">
+                <li class="nav-link"><a href='/events/'>Events</a></li>
+                <li class="nav-link"><a href='/blog/'>Blog</a></li>
+                <li class="nav-link"><a href='/team/'>Team</a></li>
+                <li class="nav-link active"><a href='/free-softwares/'>Open-Source softwares</a></li>
+
+                <li class="nav-link"><a href='/coc.html'>CoC</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- End Header -->
+
+
+    <div class="comparison-container container padding">
+        <h1>Open Source softwares</h1><button id="addMoreBtn">Add More</button>
+        <div class="software-comparison">
+            <div class="software open-source">
+                <h2 class="software-title">Open Source</h2>
+                <!-- software 1  -->
+                <div class="software-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8nOGhR0Bonsy-N6jn-Dj7S-8Dta9vO9zBjidmlW42Ngcc3_8PKYMIoZY5uOu9gvdRMyE&usqp=CAU"
+                        alt="Signal Icon" class="software-icon">
+                    <h3 class="software-name">Signal</h3>
+                    <p class="software-description">An open-source messaging app
+                    </p>
+                    <a href="https://signal.org/download/" class="download-btn" target="_blank">Download Signal</a>
+                </div>
+
+                <!-- software 2  -->
+                <div class="software-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Firefox_logo%2C_2017.svg/2048px-Firefox_logo%2C_2017.svg.png"
+                        alt="Signal Icon" class="software-icon">
+                    <h3 class="software-name">Mozilla FireFox</h3>
+                    <p class="software-description">An A open-source web browser
+                    </p>
+                    <a href="https://www.mozilla.org/en-US/firefox/new/" class="download-btn" target="_blank">Download
+                        Firefox</a>
+                </div>
+                <!-- end of open source  -->
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="software closed-source">
+                <h2 class="software-title">Closed Source</h2>
+                <!-- software 1  -->
+                <div class="software-item">
+                    <img src="https://static-00.iconduck.com/assets.00/whatsapp-icon-2040x2048-8b5th74o.png"
+                        alt="WhatsApp Icon" class="software-icon">
+                    <h3 class="software-name">WhatsApp</h3>
+                    <p class="software-description">A closed-source messaging app</p>
+                    <a href="https://www.whatsapp.com/download/" class="download-btn" target="_blank">Download
+                        WhatsApp</a>
+                </div>
+                <!-- software 2  -->
+                <div class="software-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/2048px-Google_Chrome_icon_%28February_2022%29.svg.png"
+                        alt="Signal Icon" class="software-icon">
+                    <h3 class="software-name">Google Chrome</h3>
+                    <p class="software-description">A closed source web browser
+                    </p>
+                    <a href="https://www.google.com/chrome/" class="download-btn" target="_blank">Download Chrome</a>
+                </div>
+                <!-- end of closed source  -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-box">
+                <h1>GLUG PACE</h1>
+                <p>GNU AND LINUX USERS GROUP PACE, <br /> A subgroup of (FSMK) <br /> <a href="https://fsmk.org/"
+                        style="font-size: 1em;"> Free Software Movement Karnataka.</a></p>
+            </div>
+            <div class="footer-box">
+                <h1>Open Source Community</h1>
+                <a href="http://instagram.com/glugpace" class="fa fa-instagram"></a>
+                <a href="https://twitter.com/GlugPace" class="fa fa-twitter"></a>
+                <a href="https://github.com/GLUGPACE/" class="fa fa-github"></a>
+            </div>
+            <div class="footer-box">
+                <h1>P A College of Engineering</h1>
+                <p>Nadupadav, Montepadav Post <br /> Kairangala <br /> Mangalore - 574153 <br /> Karnataka, INDIA.
+                </p>
+            </div>
+        </div>
+        <hr style="border: 0.5px solid white;" />
+        <div align="center">
+            Made with <span style="color: #e25555;">&hearts;</span> GLUG PACE
+        </div>
+    </footer>
+    <div class="modal" id="softwareModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h2>Submit Software Information</h2>
+                <a href="#softwareModal" class="btn-close" aria-hidden="true">×</a>
+            </div>
+
+            <div class="modal-body">
+                <form id="softwareForm">
+                    <label for="username">Your Name:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="opensourceName">Open Source Software Name:</label>
+                    <input type="text" id="opensourceName" name="opensourceName" required>
+
+                    <label for="opensourceDesc">Open Source Software Description:</label>
+                    <textarea id="opensourceDesc" name="opensourceDesc" required></textarea>
+
+                    <label for="closedsourceName">Closed Source Software Name:</label>
+                    <input type="text" id="closedsourceName" name="closedsourceName" required>
+
+                    <label for="closedsourceDesc">Closed Source Software Description:</label>
+                    <textarea id="closedsourceDesc" name="closedsourceDesc" required></textarea>
+
+                    <button type="button" onclick="submitForm()">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    // Get the modal
+    var softwareModal = document.getElementById('softwareModal');
+
+    // Get the button that opens the modal
+    var addMoreBtn = document.getElementById("addMoreBtn");
+
+    // Get the <span> element that closes the modal
+    var closeModalBtn = document.getElementsByClassName("btn-close")[0];
+
+    // When the user clicks the button, open the modal
+    addMoreBtn.onclick = function () {
+        softwareModal.style.display = "block";
+        // window.history.back();
+    }
+
+    // When the user clicks on <span> (x) or outside the modal, close the modal
+    closeModalBtn.onclick = function () {
+        softwareModal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+        if (event.target === softwareModal) {
+            softwareModal.style.display = "none";
+        }
+    }
+
+    // Function to handle form submission
+    function submitForm() {
+        // Get form data
+        var formData = {
+            opensourceName: document.getElementById("opensourceName").value,
+            opensourceDesc: document.getElementById("opensourceDesc").value,
+            closedsourceName: document.getElementById("closedsourceName").value,
+            closedsourceDesc: document.getElementById("closedsourceDesc").value
+        };
+
+        // You can send the form data to your server for further processing
+        // For example, using AJAX to send a request to a server-side script
+
+        // For demonstration purposes, log the data to the console
+        console.log(formData);
+
+        // Close the modal after submission
+        softwareModal.style.display = "none";
+    }
+</script>
+<script>
+    // Function to handle form submission
+    function submitForm() {
+        // Get form data
+        var formData = {
+            username: document.getElementById("username").value,
+            opensourceName: document.getElementById("opensourceName").value,
+            opensourceDesc: document.getElementById("opensourceDesc").value,
+            closedsourceName: document.getElementById("closedsourceName").value,
+            closedsourceDesc: document.getElementById("closedsourceDesc").value
+        };
+
+        // Compose the email message using the provided template
+        var messageTemplate = `
+                Open Source Software Name: ${formData.opensourceName}
+                Open Source Software Description: ${formData.opensourceDesc}
+                Closed Source Software Name: ${formData.closedsourceName}
+                Closed Source Software Description: ${formData.closedsourceDesc}
+            `;
+
+        // Use EmailJS to send the email
+        var templateParams = {
+            reply_to: "glug@pace.edu.in",
+            from_name: formData.opensourceName,
+            to_name: "GLUG PACE",
+            message: messageTemplate,
+            from_name: formData.username
+        };
+
+        // Send the email using the template
+        emailjs.send("service_5hm5k4j", "template_c5rtysu", templateParams)
+            .then(function (response) {
+                console.log("Email sent successfully:", response);
+            }, function (error) {
+                console.error("Error sending email:", error);
+            });
+
+        // Close the modal after submission
+        softwareModal.style.display = "none";
+    }
+</script>
+
+</html>

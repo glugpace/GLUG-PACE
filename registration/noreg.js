@@ -1,3 +1,3 @@
 function noRegPage() {
-  window.location.href = "https://glugpace.live/404.html";
+  window.location.href = "https://glugpace.org/404.html";
 }
