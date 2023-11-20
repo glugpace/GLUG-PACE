@@ -2,7 +2,7 @@
     <img src="images/logo.png" alt="GlugPace Logo" width="200px" height="200px"/>
  </p>
 
-# GLUG PACE [Website](https://glugpace22.tech/)🚀
+# GLUG PACE [Website](https://glugpace.org/)🚀
 
 GLUG PACE is a group of people who works for FOSS. This project is the Official website for the GLUG PACE Community.
 Find out more information at [glugpace](https://github.com/glugpace/).
@@ -48,3 +48,4 @@ Glug PACE is dedicated to building a welcoming, diverse, safe community. We expe
 - [Azlan](https://github.com/azlanajju)
 - [Rabeeh T A](https://github.com/rabeeh-ta)
 - [Sheik Rifaz Ali](https://github.com/rifaz124)
+- [Shakeel Ahammed](https://github.com/shakeelahammedabdulla)
