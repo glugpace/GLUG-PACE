@@ -122,13 +122,13 @@ const core20222023Team = [
     {
         name: "Mohamed Naimuddin U S",
         role: "Treasurer",
-        github: "https://github.com/abidzabi",
+        github: "https://github.com/mohamednaimuddin",
         image: "https://avatars1.githubusercontent.com/mohamednaimuddin?size=100",
     },
     {
         name: "Sk Md Altamas",
         role: "Technical Head",
-        github: "https://github.com/hassanmash",
+        github: "https://github.com/Altamas786",
         image: "https://avatars1.githubusercontent.com/Altamas786?size=100",
     },
     {
@@ -146,7 +146,7 @@ const core20222023Team = [
     {
         name: "Abdull Manaf",
         role: "Technical Lead",
-        github: "https://github.com/sayNawaf",
+        github: "https://github.com/manaafi",
         image: "https://avatars1.githubusercontent.com/manaafi?size=100",
     },
     {
