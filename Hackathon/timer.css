@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.wrapper {
+  position: relative;
+  height: 12em;
+}
+
+.countdown-container {
+  font-family: Montserrat, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+.countdown {
+  display: flex;
+  transform-style: preserve3d;
+  perspective: 500px;
+  height: 10rem;
+  width: 64em;
+  margin: 0 auto;
+}
+.countdown.remove {
+  animation: hide-countdown 1s cubic-bezier(0, 0.9, 0.56, 1.2) forwards;
+  overflow: hidden;
+}
+
+.number, .separator {
+  display: block;
+  color: white;
+  height: 10rem;
+  font-size: 10rem;
+  position: relative;
+  line-height: 10rem;
+  text-align: center;
+  width: 100%;
+}
+
+.separator {
+  margin: 0;
+  width: 2rem;
+}
+
+.new, .old, .current {
+  color: white;
+  position: absolute;
+  border-radius: 1rem;
+  height: 10rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.new {
+  animation: show-new 0.4s cubic-bezier(0, 0.9, 0.5, 1.2) forwards;
+}
+
+.old {
+  animation: hide-old 2s cubic-bezier(0, 0.9, 0.56, 1.2) forwards;
+}
+
+.countdown section {
+  position: relative;
+}
+
+#js-days:after, #js-hours:after, #js-minutes:after, #js-seconds:after {
+  content: "DAYS";
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: -80px;
+  font-size: 12px;
+  color:white;
+}
+#js-hours:after {
+  content: "HOURS";
+}
+#js-minutes:after {
+  content: "MINUTES";
+}
+#js-seconds:after {
+  content: "SECONDS";
+}
+@keyframes hide-countdown {
+  to {
+    height: 0;
+    overflow: hidden;
+  }
+}
+@keyframes show-new {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-2rem) scale(0.8) rotateX(-20deg);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes hide-old {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-5rem) scale(0.5) rotateX(-75deg);
+  }
+}

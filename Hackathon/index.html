@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./timer.css">
+    <title>HackSummit</title>
+    
+</head>
+<body>
+  <div id="tsparticles"></div>
+
+    <div class=" main-container h-screen">
+        <div class="secondary-container mx-auto flex flex-col justify-center items-center">
+
+          <div class="firstpage flex flex-col justify-center items-center">
+          {/* Hero Compoennet */}
+          <div class="image"  style="" >
+            <img src="./hack s w.png" alt="">
+          </div>
+
+          <!-- {/* Scroll Down */} -->
+          <div onclick="window.location.href='#end'" class="scrolldown">
+            <ul>
+              <li>
+                <img src="https://cdn-icons-png.flaticon.com/512/8625/8625104.png" class="imgm1" />
+              </li>
+              <li>
+                <img src="https://cdn-icons-png.flaticon.com/512/8625/8625104.png" class="imgm2" />
+              </li>
+              <li>
+                <img src="https://cdn-icons-png.flaticon.com/512/8625/8625104.png" class="imgm3" />
+              </li>
+            </ul>
+          </div>
+          </div>
+
+          <h1 class="gradient-text p-4 font-bold text-3xl">Registrations closes in</h1>
+
+          <!-- Timer Compoenent -->
+          <div class="timer-countdown text-gray-300 flex flex-row gap-2 ">
+            <div class="timer-days flex flex-col items-center">
+                <p id="days" class="text-lg font-bold"></p>
+                <span class="text-gray-400">Days</span>
+            </div>
+            <p>:</p>
+            <div class="timer-hours flex flex-col items-center">
+                <p id="hours" class="text-lg font-bold"></p>
+                <span class="text-gray-400">Hours</span>
+            </div>
+            <p>:</p>
+            <div class="timer-minutes flex flex-col items-center">
+                <p id="minutes" class="text-lg font-bold"></p>
+                <span class="text-gray-400">Minutes</span>
+            </div>
+            <p>:</p>
+            <div class="timer-seconds flex flex-col items-center">
+                <p id="seconds" class="text-lg font-bold"></p>
+                <span class="text-gray-400">Seconds</span>
+            </div>
+          </div>
+
+          <div class="secondpage">
+          <!-- {/* Button Compoenent */} -->
+          <div class="register">
+            <a href="https://drive.google.com/file/d/1EVKSKyY_0038NjYAjj0zmVBkMzyFRaXH/view?usp=drivesdk">
+              <button class='bg-green text-white m-16 py-2 px-8 border border-2 border-indigo-500 rounded-lg transition duration-500 hover:bg-indigo-500 hover:text-black text-lg font-bold'>Register for the Hackathon!</button>
+            </a>
+          </div>
+          </div>
+
+        </div>
+      </div>
+      <div id="end"></div>
+
+
+<footer>
+  <div class="contact">
+    for more info: <br>
+    +91 94469 85997
+  </div>
+  <img style="height: 80px;" src="./glug logo.png" alt="">
+  <img onclick="window.location.href='https://codewizy.in'" src="./codewizycredits.png" alt="">
+</footer>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./timer.js"></script>
+
+<style>
+  footer{
+    width: 100vw;
+    height: 120px;
+    background: black;
+    position: relative;
+    margin-top: 400px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+  }
+  footer img{
+    height: 50px;
+        padding-right: 20px;
+        filter: invert(100%);
+  }
+  .contact{
+    padding-left: 20px;
+  }
+</style>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@1.32.0/tsparticles.min.js"></script>
+<script src="./particle.js"></script>
+</html>
