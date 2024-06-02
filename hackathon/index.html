@@ -9,14 +9,15 @@
     
 </head>
 <body>
-  <div id="tsparticles"></div>
+  <canvas id="nokey" width="800" height="800">
+    Your Browser Don't Support Canvas, Please Download Chrome ^_^``
+</canvas>
 
     <div class=" main-container h-screen">
         <div class="secondary-container mx-auto flex flex-col justify-center items-center">
 
           <div class="firstpage flex flex-col justify-center items-center">
-          {/* Hero Compoennet */}
-          <div class="image"  style="" >
+           <div class="image"  style="" >
             <img src="./hack s w.png" alt="">
           </div>
 
@@ -64,7 +65,7 @@
           <div class="secondpage">
           <!-- {/* Button Compoenent */} -->
           <div class="register">
-            <a href="https://drive.google.com/file/d/1EVKSKyY_0038NjYAjj0zmVBkMzyFRaXH/view?usp=drivesdk">
+            <a href="https://drive.google.com/file/d/1PleUPZNacgZFkAK6Nlh_G8M_zIChsBTO/view?usp=drivesdk">
               <button class='bg-green text-white m-16 py-2 px-8 border border-2 border-indigo-500 rounded-lg transition duration-500 hover:bg-indigo-500 hover:text-black text-lg font-bold'>Register for the Hackathon!</button>
             </a>
           </div>
@@ -77,11 +78,11 @@
 
 <footer>
   <div class="contact">
-    for more info: <br>
+    For more info: <br>
     +91 94469 85997
   </div>
-  <img style="height: 80px;" src="./glug logo.png" alt="">
-  <img onclick="window.location.href='https://codewizy.in'" src="./codewizycredits.png" alt="">
+  <img style="height: 80px;" src="./glug logo.png" alt=""> 
+  <img onclick="window.location.href='https://codewizy.in'" class="codeWizy" src="./codewizycredits.png" alt="">
 </footer>
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -91,20 +92,54 @@
   footer{
     width: 100vw;
     height: 120px;
-    background: black;
+    background: #f0edee;
     position: relative;
     margin-top: 400px;
-    color: white;
+    color: #000;
     display: flex;
     justify-content: space-around;
-  }
+align-items:center;  }
   footer img{
     height: 50px;
-        padding-right: 20px;
-        filter: invert(100%);
+
+  }
+  .codeWizy{
+          height: 50px;
+
+              padding-right: 20px;
   }
   .contact{
     padding-left: 20px;
+    font-weight:bold;
+  }
+  
+  @media screen and (max-width: 780px){
+      footer{
+      flex-direction:column;
+      min-width:105vw;
+      height:auto;
+      }
+      .codeWizy{
+          position:relative;
+          left:-80px;
+          margin-top:10px;
+          margin-bottom:10px;
+      }
+      .contact{
+        position: absolute;
+        bottom: 10px;
+        right:25px;
+        font-weight:bold;
+      }
+
+  }
+  canvas{
+    height: 100vh;
+    position: absolute;
+  }
+    html,body{
+    overflow-x: hidden;
+    max-width:100vw;
   }
 </style>
 </body>
