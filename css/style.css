@@ -1119,3 +1119,26 @@ nav.container {
         font-size: 0.8em;
     }
 }
+
+.menuIcon{
+    display: none;
+}
+@media (max-width: 780px) {
+.navbar-links {
+  width: 100vw !important;
+  display: flex;
+  flex-direction: column;
+  height: 0vw;
+  overflow: hidden;
+}
+.nav-link {
+  text-align: left;
+  width: 100vw;
+}
+.menuIcon {
+    display: block;
+  font-size: 20px;
+  position: absolute;
+  left: 0;
+}
+}
