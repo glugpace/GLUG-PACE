@@ -1,325 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
     <title>GLUG PACE - Team</title>
-    <meta name="description" content="The official team of GNU/Linux User Group PACE.">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">v
-</head>
+    <meta name="description" content="The official team of GNU/Linux User Group PACE." />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  </head>
 
-<style>
+  <style>
     /* Basic styling for the team member cards */
     .member-card {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-        overflow: hidden;
-        transition: transform 0.3s ease-in-out;
-        cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
     }
 
     .member-card:hover {
-        transform: translateY(-5px);
+      transform: translateY(-5px);
     }
 
     /* Styling for the member details */
     .member-details {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
     }
 
     /* Styling for the member image */
     .member-image {
-        width: 100px;
-        height: 85px;
-        object-fit: cover;
-        border-radius: 50%;
-        margin-bottom: 10px;
+      width: 100px;
+      height: 85px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
     }
 
     /* Styling for the member data */
     .member-data {
-        text-align: center;
+      text-align: center;
     }
 
     /* Styling for member name */
     .member-name {
-        font-size: 1.2em;
-        font-weight: bold;
-        margin-bottom: 5px;
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-bottom: 5px;
     }
 
     /* Styling for member role */
     .member-role {
-        font-size: 1em;
-        color: #666;
+      font-size: 1em;
+      color: #666;
     }
 
     /* Styling for the link */
     .member-link {
-        text-decoration: none;
-        color: inherit;
+      text-decoration: none;
+      color: inherit;
     }
-</style>
+  </style>
 
-<body>
+  <body>
     <!-- Navbar -->
     <!-- ======= Header ======= -->
     <header>
-        <nav class="container">
-            <a href='/' id="logo">GLUG PACE</a>
-            <ul class="navbar-links">
-                <li class="nav-link"><a href='/events/'>Events</a></li>
-                <li class="nav-link"><a href='/blog/'>Blog</a></li>
-                <li class="nav-link active"><a href='/team/'>Team</a></li>
-                <li class="nav-link"><a href='/free-softwares/'>Open-Source softwares</a></li>
-                <li class="nav-link"><a href='/coc.html'>CoC</a></li>
-            </ul>
-        </nav>
+      <nav class="container navContainer">
+        <div class="menuIcon" id="menuIcon" onclick="toggleNavBar()">
+          <i class="fa fa-bars"></i>
+        </div>
+        <a href="/" id="logo">GLUG PACE</a>
+        <ul id="navbar-links" class="navbar-links">
+          <li class="nav-link"><a href="/">Home</a></li>
+
+          <li class="nav-link"><a href="/events/">Events</a></li>
+          <li class="nav-link"><a href="/blog/">Blog</a></li>
+          <li class="nav-link active"><a href="/team/">Team</a></li>
+          <li class="nav-link"><a href="/free-softwares/">Open-Source softwares</a></li>
+          <li class="nav-link"><a href="../coc.html">CoC</a></li>
+          <!-- <li class='nav-link'><a href='/hackathon'>Hackathon</a></li> -->
+        </ul>
+      </nav>
     </header>
     <!-- End Header -->
 
     <div class="container padding">
-        <!-- Team section -->
-        <!--Core 2023-2024-->
-        <h1>Core Members 2023-2024</h1>
-        <div class="team-container" id="core-2023-2024-team-container"></div>
-        <!--Core 2022-2023-->
-        <h1>Core Members 2022-2023</h1>
-        <div class="team-container" id="core-2022-2023-team-container"></div>
+      <!-- Team section -->
+      <!--Core 2023-2024-->
+      <h1>Core Members 2023-2024</h1>
+      <div class="team-container" id="core-2023-2024-team-container"></div>
+      <!--Core 2022-2023-->
+      <h1>Core Members 2022-2023</h1>
+      <div class="team-container" id="core-2022-2023-team-container"></div>
     </div>
 
-
-
-
     <div class="container padding">
-        <!--Core 2021-2022-->
-        <h1>Core Members 2021-2022</h1>
-        <div class="team-container" id="core-2021-2022-team-container"></div>
+      <!--Core 2021-2022-->
+      <h1>Core Members 2021-2022</h1>
+      <div class="team-container" id="core-2021-2022-team-container"></div>
 
-        <!--GEM 2021-2022-->
-        <h2>GEM(GLUG Event Management) Members</h2>
-        <div class="team-container" id="gem-2021-2022-team-container"></div>
+      <!--GEM 2021-2022-->
+      <h2>GEM(GLUG Event Management) Members</h2>
+      <div class="team-container" id="gem-2021-2022-team-container"></div>
 
-        <!--Core 2020-2021-->
-        <h1>Core Members 2020-2021</h1>
-        <div class="team-container" id="core-2020-2021-team-container"></div>
+      <!--Core 2020-2021-->
+      <h1>Core Members 2020-2021</h1>
+      <div class="team-container" id="core-2020-2021-team-container"></div>
 
+      <!--GEM 2020-2021-->
+      <h2>GEM(GLUG Event Management) Members 2020-2021</h2>
+      <div class="team-container" id="gem-2020-2021-team-container"></div>
 
-        <!--GEM 2020-2021-->
-        <h2>GEM(GLUG Event Management) Members 2020-2021</h2>
-        <div class="team-container" id="gem-2020-2021-team-container"></div>
+      <!--Core 2019-2020-->
+      <h1>Core Members 2019-2020</h1>
+      <div class="team-container" id="core-2019-2020-team-container"></div>
 
-        <!--Core 2019-2020-->
-        <h1>Core Members 2019-2020</h1>
-        <div class="team-container" id="core-2019-2020-team-container"></div>
+      <!--GEM 2018-2019-->
+      <h2>GEM(GLUG Event Management) Members 2018-2019</h2>
+      <div class="team-container" id="gem-2019-2020-team-container"></div>
 
-        <!--GEM 2018-2019-->
-        <h2>GEM(GLUG Event Management) Members 2018-2019</h2>
-        <div class="team-container" id="gem-2019-2020-team-container"></div>
-
-        <!-- Ex Core -->
-        <h1>Core Members 2018-2019</h1>
-        <div class="team-container">
-            <div class="member-card">
-                <a href="https://github.com/mohammed-adil" target="_blank">
-                    <div class="member-details">
-                        <img class="member-image" src="https://avatars1.githubusercontent.com/mohammed-adil?size=100"
-                            alt="" />
-                        <div class="member-data">
-                            <p class="member-name">Sheik Mohammed Adil</p>
-                            <p class="member-role">President | Website Maintainer</p>
-                        </div>
-                    </div>
-                </a>
+      <!-- Ex Core -->
+      <h1>Core Members 2018-2019</h1>
+      <div class="team-container">
+        <div class="member-card">
+          <a href="https://github.com/mohammed-adil" target="_blank">
+            <div class="member-details">
+              <img class="member-image" src="https://avatars1.githubusercontent.com/mohammed-adil?size=100" alt="" />
+              <div class="member-data">
+                <p class="member-name">Sheik Mohammed Adil</p>
+                <p class="member-role">President | Website Maintainer</p>
+              </div>
             </div>
-            <div class="member-card">
-                <a href="https://github.com/voidxyzvoidxyz" target="_blank">
-                    <div class="member-details">
-                        <img class="member-image" src="https://avatars1.githubusercontent.com/voidxyzvoidxyz?size=100"
-                            alt="" />
-                        <div class="member-data">
-                            <p class="member-name">Mohammed Shakir</p>
-                            <p class="member-role">Vice President | Administrator</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="member-card">
-                <a href="https://github.com/hasna-akbarali" target="_blank">
-                    <div class="member-details">
-                        <img class="member-image" src="https://avatars1.githubusercontent.com/hasna-akbarali?size=100"
-                            alt="" />
-                        <div class="member-data">
-                            <p class="member-name">Hasna Akbar Ali</p>
-                            <p class="member-role">Content Manager</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="member-card">
-                <a href="https://github.com/saleharafath" target="_blank">
-                    <div class="member-details">
-                        <img class="member-image" src="https://avatars1.githubusercontent.com/saleharafath?size=100"
-                            alt="" />
-                        <div class="member-data">
-                            <p class="member-name">Saleh Arafath</p>
-                            <p class="member-role">Treasurer | FSMK Coordinator</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="member-card">
-                <a href="https://github.com/nikhil-amin" target="_blank">
-                    <div class="member-details">
-                        <img class="member-image" src="https://avatars1.githubusercontent.com/nikhil-amin?size=100"
-                            alt="" />
-                        <div class="member-data">
-                            <p class="member-name">Nikhil Amin</p>
-                            <p class="member-role">Coordinator | Technical Lead</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="member-card">
-                <a href="https://github.com/aditikirannaik" target="_blank">
-                    <div class="member-details">
-                        <img class="member-image" src="https://avatars1.githubusercontent.com/aditikirannaik?size=100"
-                            alt="" />
-                        <div class="member-data">
-                            <p class="member-name">Aditi Naik</p>
-                            <p class="member-role">Coordinator | Marketing Lead</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="member-card">
-                <a href="https://github.com/anagha428" target="_blank">
-                    <div class="member-details">
-                        <img class="member-image" src="https://avatars1.githubusercontent.com/anagha428?size=100"
-                            alt="" />
-                        <div class="member-data">
-                            <p class="member-name">Anagha Premraj</p>
-                            <p class="member-role">Coordinator</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="member-card">
-                <a href="https://github.com/shahana98" target="_blank">
-                    <div class="member-details">
-                        <img class="member-image" src="https://avatars1.githubusercontent.com/shahana98?size=100"
-                            alt="" />
-                        <div class="member-data">
-                            <p class="member-name">Shahana Ankalgi</p>
-                            <p class="member-role">Coordinator</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="member-card">
-                <a href="https://github.com/ahmed-saifulla" target="_blank">
-                    <div class="member-details">
-                        <img class="member-image" src="https://avatars1.githubusercontent.com/ahmed-saifulla?size=100"
-                            alt="" />
-                        <div class="member-data">
-                            <p class="member-name">Ahmed Saifulla N S</p>
-                            <p class="member-role">Coordinator</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+          </a>
         </div>
-
-        <!-- Ex Core -->
-        <h1>Core Members 2016-2017</h1>
-        <div class="team-container">
-            <div class="member-card">
-                <a href="https://github.com/sushinpv" target="_blank">
-                    <div class="member-details">
-                        <img class="member-image" src="https://avatars1.githubusercontent.com/sushinpv?size=100"
-                            alt="" />
-                        <div class="member-data">
-                            <p class="member-name">Sushin Pv</p>
-                            <p class="member-role">President | FMSK Representative</p>
-                        </div>
-                    </div>
-                </a>
+        <div class="member-card">
+          <a href="https://github.com/voidxyzvoidxyz" target="_blank">
+            <div class="member-details">
+              <img class="member-image" src="https://avatars1.githubusercontent.com/voidxyzvoidxyz?size=100" alt="" />
+              <div class="member-data">
+                <p class="member-name">Mohammed Shakir</p>
+                <p class="member-role">Vice President | Administrator</p>
+              </div>
             </div>
-            <div class="member-card">
-                <a href="https://github.com/Indhu-Krishnamurthy" target="_blank">
-                    <div class="member-details">
-                        <img class="member-image"
-                            src="https://avatars1.githubusercontent.com/Indhu-Krishnamurthy?size=100" alt="" />
-                        <div class="member-data">
-                            <p class="member-name">Indhu K</p>
-                            <p class="member-role">FMSK Representative</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="member-card">
-                <a href="#" target="_blank">
-                    <div class="member-details">
-                        <img class="member-image" src="https://avatars1.githubusercontent.com/username?size=100"
-                            alt="" />
-                        <div class="member-data">
-                            <p class="member-name">Reemaz Baig</p>
-                            <p class="member-role">Treasurer</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="member-card">
-                <a href="#" target="_blank">
-                    <div class="member-details">
-                        <img class="member-image" src="https://avatars1.githubusercontent.com/username?size=100"
-                            alt="" />
-                        <div class="member-data">
-                            <p class="member-name">Mohammed Ameen</p>
-                            <p class="member-role">Social Media Manager</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+          </a>
         </div>
+        <div class="member-card">
+          <a href="https://github.com/hasna-akbarali" target="_blank">
+            <div class="member-details">
+              <img class="member-image" src="https://avatars1.githubusercontent.com/hasna-akbarali?size=100" alt="" />
+              <div class="member-data">
+                <p class="member-name">Hasna Akbar Ali</p>
+                <p class="member-role">Content Manager</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="member-card">
+          <a href="https://github.com/saleharafath" target="_blank">
+            <div class="member-details">
+              <img class="member-image" src="https://avatars1.githubusercontent.com/saleharafath?size=100" alt="" />
+              <div class="member-data">
+                <p class="member-name">Saleh Arafath</p>
+                <p class="member-role">Treasurer | FSMK Coordinator</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="member-card">
+          <a href="https://github.com/nikhil-amin" target="_blank">
+            <div class="member-details">
+              <img class="member-image" src="https://avatars1.githubusercontent.com/nikhil-amin?size=100" alt="" />
+              <div class="member-data">
+                <p class="member-name">Nikhil Amin</p>
+                <p class="member-role">Coordinator | Technical Lead</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="member-card">
+          <a href="https://github.com/aditikirannaik" target="_blank">
+            <div class="member-details">
+              <img class="member-image" src="https://avatars1.githubusercontent.com/aditikirannaik?size=100" alt="" />
+              <div class="member-data">
+                <p class="member-name">Aditi Naik</p>
+                <p class="member-role">Coordinator | Marketing Lead</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="member-card">
+          <a href="https://github.com/anagha428" target="_blank">
+            <div class="member-details">
+              <img class="member-image" src="https://avatars1.githubusercontent.com/anagha428?size=100" alt="" />
+              <div class="member-data">
+                <p class="member-name">Anagha Premraj</p>
+                <p class="member-role">Coordinator</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="member-card">
+          <a href="https://github.com/shahana98" target="_blank">
+            <div class="member-details">
+              <img class="member-image" src="https://avatars1.githubusercontent.com/shahana98?size=100" alt="" />
+              <div class="member-data">
+                <p class="member-name">Shahana Ankalgi</p>
+                <p class="member-role">Coordinator</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="member-card">
+          <a href="https://github.com/ahmed-saifulla" target="_blank">
+            <div class="member-details">
+              <img class="member-image" src="https://avatars1.githubusercontent.com/ahmed-saifulla?size=100" alt="" />
+              <div class="member-data">
+                <p class="member-name">Ahmed Saifulla N S</p>
+                <p class="member-role">Coordinator</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
 
+      <!-- Ex Core -->
+      <h1>Core Members 2016-2017</h1>
+      <div class="team-container">
+        <div class="member-card">
+          <a href="https://github.com/sushinpv" target="_blank">
+            <div class="member-details">
+              <img class="member-image" src="https://avatars1.githubusercontent.com/sushinpv?size=100" alt="" />
+              <div class="member-data">
+                <p class="member-name">Sushin Pv</p>
+                <p class="member-role">President | FMSK Representative</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="member-card">
+          <a href="https://github.com/Indhu-Krishnamurthy" target="_blank">
+            <div class="member-details">
+              <img class="member-image" src="https://avatars1.githubusercontent.com/Indhu-Krishnamurthy?size=100" alt="" />
+              <div class="member-data">
+                <p class="member-name">Indhu K</p>
+                <p class="member-role">FMSK Representative</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="member-card">
+          <a href="#" target="_blank">
+            <div class="member-details">
+              <img class="member-image" src="https://avatars1.githubusercontent.com/username?size=100" alt="" />
+              <div class="member-data">
+                <p class="member-name">Reemaz Baig</p>
+                <p class="member-role">Treasurer</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="member-card">
+          <a href="#" target="_blank">
+            <div class="member-details">
+              <img class="member-image" src="https://avatars1.githubusercontent.com/username?size=100" alt="" />
+              <div class="member-data">
+                <p class="member-name">Mohammed Ameen</p>
+                <p class="member-role">Social Media Manager</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-box">
-                <h1>GLUG PACE</h1>
-                <p>GNU AND LINUX USERS GROUP PACE, <br /> A subgroup of (FSMK) <br /> <a href="https://fsmk.org/"
-                        style="font-size: 1em;"> Free Software Movement Karnataka.</a></p>
-            </div>
-            <div class="footer-box">
-                <h1>Open Source Community</h1>
-                <a href="http://instagram.com/glugpace" class="fa fa-instagram"></a>
-                <a href="https://twitter.com/GlugPace" class="fa fa-twitter"></a>
-                <a href="https://github.com/GLUGPACE/" class="fa fa-github"></a>
-            </div>
-            <div class="footer-box">
-                <h1>P A College of Engineering</h1>
-                <p>Nadupadav, Montepadav Post <br /> Kairangala <br /> Mangalore - 574153 <br /> Karnataka, INDIA.
-                </p>
-            </div>
+      <div class="container">
+        <div class="footer-box">
+          <h1>GLUG PACE</h1>
+          <p>
+            GNU AND LINUX USERS GROUP PACE, <br />
+            A subgroup of (FSMK) <br />
+            <a href="https://fsmk.org/" style="font-size: 1em"> Free Software Movement Karnataka.</a>
+          </p>
         </div>
-        <hr style="border: 0.5px solid white;" />
-        <div align="center">
-            Made with <span style="color: #e25555;">&hearts;</span> GLUG PACE
+        <div class="footer-box">
+          <h1>Open Source Community</h1>
+          <a href="http://instagram.com/glugpace" class="fa fa-instagram"></a>
+          <a href="https://twitter.com/GlugPace" class="fa fa-twitter"></a>
+          <a href="https://github.com/GLUGPACE/" class="fa fa-github"></a>
         </div>
+        <div class="footer-box">
+          <h1>P A College of Engineering</h1>
+          <p>
+            Nadupadav, Montepadav Post <br />
+            Kairangala <br />
+            Mangalore - 574153 <br />
+            Karnataka, INDIA.
+          </p>
+        </div>
+      </div>
+      <hr style="border: 0.5px solid white" />
+      <div align="center">Made with <span style="color: #e25555">&hearts;</span> GLUG PACE</div>
     </footer>
 
     <script src="script.js"></script>
-</body>
-
+    <script src="../main.js"></script>
+  </body>
 </html>
