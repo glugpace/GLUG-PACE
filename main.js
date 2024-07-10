@@ -1,5 +1,6 @@
+document.getElementById("navbar-links").style.height = "0vw";
+
 function toggleNavBar() {
-  document.getElementById("navbar-links").style.height = "0vw";
 
     height = document.getElementById("navbar-links").style.height;
     if (height == "0vw") {
