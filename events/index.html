@@ -15,16 +15,23 @@
 <body>
     <!-- Navbar -->
     <header>
-        <nav class="container">
-            <a href='/' id="logo">GLUG PACE</a>
-            <ul class="navbar-links">
-                <li class="nav-link active"><a href='/events/'>Events</a></li>
-                <li class="nav-link"><a href='/blog/'>Blog</a></li>
-                <li class="nav-link"><a href='/team/'>Team</a></li>
-                <li class="nav-link"><a href='/free-softwares/'>Open-Source softwares</a></li>
-                <li class="nav-link"><a href='/coc.html'>CoC</a></li>
+        <nav class="container navContainer">
+            <div class="menuIcon" id="menuIcon" onclick="toggleNavBar()">
+              <i class="fa fa-bars"></i>
+            </div>
+            <a href="/" id="logo">GLUG PACE</a>
+            <ul id="navbar-links" class="navbar-links">
+                <li class="nav-link "><a href="../index.html">Home</a></li>
+    
+              <li class="nav-link active"><a href="/events/">Events</a></li>
+              <li class="nav-link"><a href="/blog/">Blog</a></li>
+              <li class="nav-link"><a href="/team/">Team</a></li>
+              <li class="nav-link"><a href="/free-softwares/">Open-Source softwares</a></li>
+              <li class="nav-link"><a href="../coc.html">CoC</a></li>
+              <!-- <li class='nav-link'><a href='/hackathon'>Hackathon</a></li> -->
+    
             </ul>
-        </nav>
+          </nav>
     </header>
 
     <!-- Event Section -->
@@ -417,5 +424,5 @@
         </div>
     </footer>
 </body>
-
+<script src="../main.js"></script>
 </html>
