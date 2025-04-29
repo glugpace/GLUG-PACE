@@ -248,6 +248,25 @@ body {
   box-shadow: 0 4px 20px rgba(255, 0, 255, 0.2);
 }
 
+.innov8rix-hacksummit-registration {
+  margin-top: 60px;
+  padding: 20px;
+  border: 2px solid #ff00ff;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  font-size: 1.3em;
+  color: #ddd;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 20px rgba(255, 0, 255, 0.2);
+}
+
+.early-bird {
+}
+
 .location-info h2 {
   font-size: 1.5em;
   color: #ff00ff;
@@ -403,5 +422,16 @@ body {
     transform: scale(1);
   }
 }
+.register {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px 20px;
+  border-radius: 15px;
+  margin: 30px auto;
+  max-width: 500px;
+  width: 90%;
+  backdrop-filter: blur(8px);
+  border: 2px solid #ff00ff;
 
-
+  /* Transition effect on hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
