@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hack Summit 2025</title>
+  <link rel="stylesheet" href="./css/styles.css"> <!-- Linking external CSS -->
+
+  <style>
+    /* Add this inside your head or styles.css */
+    .prize-info {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .prize-info.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="overlay"></div>
+
+  <div class="container">
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="logo-title">
+        <img src="./images/logo.png" alt="College Logo" class="college-logo">
+        <div class="college-name">
+          <h1>P A COLLEGE OF ENGINEERING</h1>
+          <h2>Affiliated to VTU | Recognized by Karnataka Govt.</h2>
+          <h2>Approved by AICTE</h2>
+        </div>
+      </div>
+      <div class="summit-logo">
+        <img src="./images/logo2.png" alt="Hack Summit Logo" class="summit-logo-img">
+        <p class="glug-text">GLUG PACE</p>
+      </div>
+    </div>
+
+    <!-- Center Text -->
+    <div class="centered-text">
+      <p class="presents-text">Presents</p>
+      <h2 class="tech-summit-title">A 5-Day National Level Tech Summit!</h2>
+    </div>
+
+    <!-- Images Section -->
+    <div class="image-section">
+      <div class="image-container">
+        <img src="./images/1.png" alt="Image 1" class="summit-image">
+      </div>
+      <div class="image-container">
+        <img src="./images/3.png" alt="Image 3" class="summit-image small-image">
+      </div>
+      <div class="image-container">
+        <img src="./images/2.png" alt="Image 2" class="summit-image">
+      </div>
+    </div>
+
+    <!-- Powered By -->
+    <div class="powered-by">Powered by</div>
+
+    <!-- Logo 3 -->
+    <div class="logo3-container">
+      <img src="./images/logo3.png" alt="Powered Logo">
+    </div>
+
+    <!-- Prize Info Section -->
+    <div class="prize-info">
+      <h2>Prize Pool</h2>
+      <p><span class="highlighted-prize">₹65,000</span></p> 
+      <p><span style="font-size: 2em; color: #ff00ff;">+</span></p> 
+      <p><span style="font-size: 2em; color: white;">Exciting Swags and Internship Opportunities</span></p>
+    </div>
+
+    <!-- Event Dates -->
+    <div class="event-dates">
+      May 12th - May 16th, 2025
+    </div>
+
+    <!-- Location Information -->
+    <div class="location-info">
+      <h2>Event Location</h2>
+      <p><strong>Venue:</strong> P A College of Engineering, Nadupadav, Mangalore, Karnataka, India</p>
+    </div>
+
+    <!-- Tagline -->
+    <div class="tagline">
+      "Innovate beyond Limits"
+    </div>
+
+    <!-- Buttons Section -->
+    <div class="buttons-section">
+      <a href="Innov8rix timeline.html" class="btn register-btn" target="_blank">Innov8rix</a>
+      <a href="hacksummit.html" class="btn register-btn" target="_blank">HackSummit</a>
+    </div>
+
+    <!-- Social Links -->
+    <div class="socials">
+      <a href="https://www.instagram.com/glug_pace/" target="_blank">Instagram</a>
+      <a href="https://www.linkedin.com/posts/glugpace_hacksummit2024-innovatebeyondlimits-hackathon-activity-7205908282983501824-8wgm" target="_blank">LinkedIn</a>
+      <a href="http://glugpace.org/" target="_blank">Website</a>
+      <a href="https://github.com/GLUGPACE" target="_blank">GitHub</a>
+    </div>
+
+  </div>
+
+  <!-- Script at the end -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, {
+        threshold: 0.2
+      });
+
+      const prizeBox = document.querySelector('.prize-info');
+      if (prizeBox) {
+        observer.observe(prizeBox);
+      }
+    });
+  </script>
+
+</body>
+</html>

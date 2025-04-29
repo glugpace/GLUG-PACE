@@ -1,0 +1,407 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body with Background */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  background-image: url('../images/background.jpg ');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Dark Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* Container */
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Logo Title */
+.logo-title {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.college-logo {
+  width: 100px;
+  height: auto;
+  margin-right: 15px;
+}
+
+.college-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.college-name h1 {
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 1.2;
+  background: linear-gradient(90deg, #ff00ff, #00ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.college-name h2 {
+  font-size: 18px;
+  color: white;
+  font-weight: normal;
+}
+
+/* Summit Logo */
+.summit-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.summit-logo-img {
+  width: 80px;
+  height: auto;
+}
+
+.glug-text {
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff00ff, #00ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Centered Text */
+.centered-text {
+  margin-top: 30px;
+}
+
+.presents-text,
+.tech-summit-title,
+.powered-by,
+.tagline,
+.prize-info h2 {
+  background: linear-gradient(90deg, #ff00ff, #00ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.presents-text {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.tech-summit-title {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.powered-by {
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.tagline {
+  margin-top: 40px;
+  font-size: 2em;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Image Section */
+.image-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.image-container {
+  flex: 1 1 30%;
+  text-align: center;
+}
+
+.summit-image {
+  width: 100%;
+  max-width: 300px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.small-image {
+  width: 20%;
+  height: auto;
+  margin-top: 25%;
+}
+
+/* Logo 3 */
+.logo3-container {
+  margin-top: 20px;
+}
+
+.logo3-container img {
+  width: 300px;
+  height: auto;
+}
+
+.prize-info {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px 20px;
+  border-radius: 15px;
+  margin: 30px auto;
+  max-width: 500px;
+  width: 90%;
+  backdrop-filter: blur(8px);
+  border: 2px solid #ff00ff;
+  
+  /* Initial pop-up animation */
+  animation: popUp 1s ease-out forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Initially hidden */
+.prize-info {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* When in viewport */
+.prize-info.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Hover Animation */
+.prize-info:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff00ff, 0 0 30px #00ffff;
+}
+
+
+.prize-info .highlighted-prize {
+  font-size: 4em;
+  font-weight: bold;
+  color: #ff00ff;
+}
+
+/* Event Dates */
+.event-dates {
+  margin-top: 40px;
+  font-size: 1.5em;
+  color: #ddd;
+}
+
+/* Location Info */
+.location-info {
+  margin-top: 60px;
+  padding: 20px;
+  border: 2px solid #ff00ff;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  font-size: 1.3em;
+  color: #ddd;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 20px rgba(255, 0, 255, 0.2);
+}
+
+.location-info h2 {
+  font-size: 1.5em;
+  color: #ff00ff;
+  margin-bottom: 10px;
+}
+
+.location-info p {
+  font-size: 1.1em;
+  color: #bbb;
+}
+
+/* Approved by AICTE */
+.approved-aicte {
+  font-size: 1.2em;
+  margin-top: 20px;
+  color: #ddd;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Socials */
+.socials {
+  margin-top: 30px;
+  font-size: 1em;
+}
+
+.socials a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.socials a:hover {
+  text-decoration: underline;
+  color: #ff00ff;
+}
+
+/* Buttons */
+.buttons-section {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #ff00ff, #00ffff);
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 0, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .college-logo {
+    display: none;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .summit-image,
+  .small-image {
+    width: 80%;
+    max-width: 250px;
+    height: auto;
+  }
+
+  .college-name h1 {
+    font-size: 22px;
+  }
+
+  .college-name h2 {
+    font-size: 16px;
+  }
+
+  .approved-aicte {
+    font-size: 1.4em;
+  }
+
+  .location-info {
+    margin-top: 40px;
+    padding: 15px;
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .college-name h1 {
+    font-size: 20px;
+  }
+
+  .college-name h2 {
+    font-size: 14px;
+  }
+
+  .tech-summit-title {
+    font-size: 28px;
+  }
+
+  .presents-text {
+    font-size: 20px;
+  }
+
+  .summit-image,
+  .small-image {
+    width: 90%;
+    height: auto;
+  }
+
+  .approved-aicte {
+    font-size: 1.2em;
+  }
+
+  .location-info {
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 1em;
+  }
+}
+
+@keyframes popUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+

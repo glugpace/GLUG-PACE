@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HackSummit Timeline</title>
+    <style>
+        body {
+            background: black url('./images/background.jpg') no-repeat center center/cover;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        img {
+            max-width: 90%;
+            height: auto;
+            margin-bottom: 30px;
+        }
+        .info-container {
+            width: 90%;
+            max-width: 800px;
+            background: rgba(30, 30, 30, 0.8);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #A10167;
+        }
+        .section-title {
+            color: #A10167;
+            font-size: 22px;
+            margin: 20px 0 10px;
+            text-align: center;
+        }
+        .info {
+            font-size: 18px;
+            text-align: justify;
+            line-height: 1.6;
+            color: #A10167;
+        }
+        .name {
+            font-weight: bold;
+            color: #00D4FF;
+        }
+        .role, .ph {
+            font-style: italic;
+            color: #A10167;
+        }
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #A10167, transparent);
+            margin: 25px 0;
+        }
+
+        .student-coordinators {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .hafeez, .afran, .bilal {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="./images/Timeline.png" alt="HackSummit Timeline">
+
+    <div class="info-container">        
+        <div class="info">
+            <div class="section-title"><b>Faculty Coordinator</b></div>
+            <div class="hafeez">
+                <div class="name">Dr. Mohammed Hafeez MK</div>
+                <div class="ph">+91 6363553239</div>
+                <div class="role">Associate Professor, Dept of CSE</div>
+            </div>
+            <hr>
+
+            <div class="section-title"><b>Student Coordinators</b></div>
+            <div class="student-coordinators">
+                <div class="bilal">
+                    <div class="name">Mohammed Bilal</div>
+                    <div class="ph">+91 8088787427</div>
+                    <div class="role">Lead Organiser</div>
+                </div>
+
+                <div class="afran">
+                    <div class="name">Abdul Kader Suhair Afran</div>
+                    <div class="ph">+91 8310281654</div>
+                    <div class="role">General Secretary</div>
+                </div>
+        </div>
+        </div>
+    </div>
+
+</body>
+</html>
