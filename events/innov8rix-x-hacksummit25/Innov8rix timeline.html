@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnoV8rix Event Lineup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+    --primary: #00ffff; /* Neon Cyan */
+    --secondary: #ff00ff; /* Neon Magenta */
+    --accent: #ffffff; /* White */
+    --dark: #000000; /* True Black */
+    --darker: #000000; /* Even more black */
+    --light: #ffffff; /* White text */
+}
+
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--light);
+            background-color: var(--darker);
+            background-image: url('background.jpg');
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), #6A0136);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 20px rgba(161, 1, 103, 0.3);
+            margin-bottom: 2rem;
+            border-bottom: 3px solid var(--accent);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-weight: 300;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .day-section {
+            background: rgba(30, 30, 30, 0.8);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+            border-left: 3px solid var(--primary);
+        }
+        
+        .day-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px dashed rgba(161, 1, 103, 0.5);
+        }
+        
+        .day-title {
+            font-size: 1.8rem;
+            color: var(--secondary);
+            margin: 0;
+            text-shadow: 0 0 10px rgba(255, 110, 199, 0.3);
+        }
+        
+        .day-theme {
+            background: var(--primary);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            box-shadow: 0 0 10px rgba(161, 1, 103, 0.5);
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--primary), var(--accent));
+        }
+        
+        .event {
+            position: relative;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: rgba(40, 40, 40, 0.7);
+            border-radius: 10px;
+            border-left: 4px solid var(--accent);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .event:hover {
+            transform: translateY(-5px);
+            background: rgba(50, 50, 50, 0.9);
+            box-shadow: 0 8px 20px rgba(161, 1, 103, 0.3);
+        }
+        
+        .event::before {
+            content: '';
+            position: absolute;
+            left: -27px;
+            top: 20px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--accent);
+            z-index: 1;
+            box-shadow: 0 0 10px var(--accent);
+        }
+        
+        .event-time {
+            font-weight: bold;
+            color: var(--secondary);
+            margin-bottom: 0.3rem;
+        }
+        
+        .event-name {
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            color: var(--light);
+        }
+        
+        .event-name i {
+            margin-right: 10px;
+            color: var(--accent);
+            text-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
+        }
+        
+        .event-venue {
+            display: inline-block;
+            background: rgba(161, 1, 103, 0.2);
+            color: var(--secondary);
+            padding: 0.2rem 0.5rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(161, 1, 103, 0.5);
+        }
+        
+        .gaming-section {
+            background: rgba(10, 10, 30, 0.6);
+            border-radius: 10px;
+            padding: 1rem;
+            margin-top: 1.5rem;
+            border: 1px dashed var(--accent);
+        }
+        
+        .gaming-title {
+            display: flex;
+            align-items: center;
+            color: var(--accent);
+            margin-top: 0;
+            text-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
+        }
+        
+        .gaming-title i {
+            margin-right: 10px;
+        }
+        
+        /* Glow effects */
+        .event:hover .event-name {
+            text-shadow: 0 0 8px rgba(255, 110, 199, 0.5);
+        }
+        
+        @media (max-width: 768px) {
+            .day-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .day-theme {
+                margin-top: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-rocket"></i> InnoV8rix Event Lineup</h1>
+            <p class="subtitle">A Tech & Innovation Extravaganza | May 12-14</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- Day 1 -->
+        <section class="day-section">
+            <div class="day-header">
+                <h2 class="day-title">Day 1 - May 12</h2>
+                <span class="day-theme">Code, Compete, Conquer</span>
+            </div>
+            
+            <div class="timeline">
+                <div class="event">
+                  <div class="event-time">09:30 - 10:30</div>
+                  <h3 class="event-name" ><i class="fas fa-terminal"></i> Terminal Tussle</h3>
+                  <span class="event-venue">NT Lab & Novel Lab</span>
+                </div>
+                <div class="event">
+                    <div class="event-time">10:30 - 11:30</div>
+                    <h3 class="event-name" ><i class="fas fa-bolt"></i> Blackout</h3>
+                    <span class="event-venue">Unix Lab</span>
+                </div>
+                
+                <div class="event">
+                    <div class="event-time">11:30 - 12:30</div>
+                    <h3 class="event-name"><i class="fas fa-search"></i> TechXplore</h3>
+                    <span class="event-venue">Edusat Hall</span>
+                </div>
+                
+                <div class="event">
+                    <div class="event-time">01:30 - 02:30</div>
+                    <h3 class="event-name"><i class="fas fa-bug"></i> Smack-D-Bug</h3>
+                    <span class="event-venue">Unix Lab</span>
+                </div>
+                
+                <div class="event">
+                    <div class="event-time">02:30 - 03:30</div>
+                    <h3 class="event-name"><i class="fas fa-flask"></i> Research Revelations</h3>
+                    <span class="event-venue">Web Lab</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Day 2 -->
+        <section class="day-section">
+            <div class="day-header">
+                <h2 class="day-title">Day 2 - May 13</h2>
+                <span class="day-theme">Battle of Brains & Bytes</span>
+            </div>
+            
+            <div class="timeline">
+                <div class="event">
+                    <div class="event-time">09:30 - 10:30</div>
+                    <h3 class="event-name"><i class="fas fa-code"></i> ByteWars</h3>
+                    <span class="event-venue">Unix Lab</span>
+                </div>
+                
+                <div class="event">
+                    <div class="event-time">09:30 - 10:30</div>
+                    <h3 class="event-name"><i class="fas fa-handshake"></i> Hire Me!</h3>
+                    <span class="event-venue">GD Room</span>
+                </div>
+                
+                <div class="event">
+                    <div class="event-time">11:00 - 12:00</div>
+                    <h3 class="event-name"><i class="fas fa-crown"></i> Syntax Royale</h3>
+                    <span class="event-venue">Unix Lab</span>
+                </div>
+                
+                <div class="event">
+                    <div class="event-time">11:30 - 12:30</div>
+                    <h3 class="event-name"><i class="fas fa-question-circle"></i> Otaku Quiz Battle</h3>
+                    <span class="event-venue">CS Classrooms</span>
+                </div>
+                
+                <div class="event">
+                    <div class="event-time">01:30 - 02:30</div>
+                    <h3 class="event-name"><i class="fas fa-microphone"></i> Pitch Perfect</h3>
+                    <span class="event-venue">G20</span>
+                </div>
+                
+                <div class="event">
+                    <div class="event-time">02:00 - 03:30</div>
+                    <h3 class="event-name"><i class="fas fa-moon"></i> Dark Side of InnoV8rix</h3>
+                    <span class="event-venue">Unix Lab</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Day 3 -->
+        <section class="day-section">
+            <div class="day-header">
+                <h2 class="day-title">Day 3 - May 14</h2>
+                <span class="day-theme">Logic, Laughter & Legends</span>
+            </div>
+            
+            <div class="timeline">
+                <div class="event">
+                    <div class="event-time">09:30 - 10:30</div>
+                    <h3 class="event-name"><i class="fas fa-question"></i> TechTrivia</h3>
+                    <span class="event-venue">G20</span>
+                </div>
+                
+                <div class="event">
+                    <div class="event-time">10:30 - 11:30</div>
+                    <h3 class="event-name"><i class="fas fa-brain"></i> Clash of Wits</h3>
+                    <span class="event-venue">GD Room</span>
+                </div>
+                
+                <div class="event">
+                    <div class="event-time">11:30 - 12:30</div>
+                    <h3 class="event-name"><i class="fas fa-cloud"></i> Digital Dreams</h3>
+                    <span class="event-venue">G20</span>
+                </div>
+            </div>
+            
+            <div class="gaming-section">
+                <h3 class="gaming-title"><i class="fas fa-gamepad"></i> Gaming Arena</h3>
+                
+                <div class="timeline">
+                    <div class="event">
+                        <div class="event-time">09:00 - 11:00</div>
+                        <h3 class="event-name"><i class="fas fa-chess"></i> Chess</h3>
+                        <span class="event-venue">G18</span>
+                    </div>
+                    
+                    <div class="event">
+                        <div class="event-time">11:00 - 12:00</div>
+                        <h3 class="event-name"><i class="fas fa-dice"></i> Ludo</h3>
+                        <span class="event-venue">Edusat Hall</span>
+                    </div>
+                    
+                    <div class="event">
+                        <div class="event-time">12:00 - 01:30</div>
+                        <h3 class="event-name"><i class="fas fa-gun"></i> Call of Duty</h3>
+                        <span class="event-venue">Edusat Hall</span>
+                    </div>
+                    
+                    <div class="event">
+                        <div class="event-time">01:30 - 03:30</div>
+                        <h3 class="event-name"><i class="fas fa-futbol"></i> Arcadia E-Football</h3>
+                        <span class="event-venue">Edusat Hall</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
