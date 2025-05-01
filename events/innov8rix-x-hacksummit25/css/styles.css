@@ -9,13 +9,14 @@
 body {
   font-family: 'Arial', sans-serif;
   background-color: #000;
-  background-image: url('../images/background.jpg ');
+  background-image: url('background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: white;
   text-align: center;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Dark Overlay */
@@ -36,6 +37,29 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Navbar */
@@ -82,6 +106,7 @@ body {
   font-size: 18px;
   color: white;
   font-weight: normal;
+  
 }
 
 /* Summit Logo */
@@ -152,6 +177,7 @@ body {
   gap: 20px;
   margin-top: 30px;
   flex-wrap: wrap;
+
 }
 
 .image-container {
@@ -183,6 +209,7 @@ body {
   height: auto;
 }
 
+/* Prize Info Section */
 .prize-info {
   background: rgba(255, 255, 255, 0.05);
   padding: 30px 20px;
@@ -192,31 +219,13 @@ body {
   width: 90%;
   backdrop-filter: blur(8px);
   border: 2px solid #ff00ff;
-  
-  /* Initial pop-up animation */
-  animation: popUp 1s ease-out forwards;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-/* Initially hidden */
-.prize-info {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
 
-/* When in viewport */
-.prize-info.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-/* Hover Animation */
 .prize-info:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px #ff00ff, 0 0 30px #00ffff;
 }
-
 
 .prize-info .highlighted-prize {
   font-size: 4em;
@@ -246,25 +255,12 @@ body {
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0 4px 20px rgba(255, 0, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.innov8rix-hacksummit-registration {
-  margin-top: 60px;
-  padding: 20px;
-  border: 2px solid #ff00ff;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
-  font-size: 1.3em;
-  color: #ddd;
-  text-align: center;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 4px 20px rgba(255, 0, 255, 0.2);
-}
-
-.early-bird {
+.location-info:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff00ff, 0 0 30px #00ffff;
 }
 
 .location-info h2 {
@@ -307,15 +303,16 @@ body {
   color: #ff00ff;
 }
 
-/* Buttons */
+/* Buttons Section */
 .buttons-section {
   margin-top: 40px;
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
+/* Button Styles */
 .btn {
   padding: 12px 24px;
   font-size: 1.1em;
@@ -325,12 +322,13 @@ body {
   border: none;
   border-radius: 8px;
   text-decoration: none;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s ease;
+  text-align: center;
 }
 
 .btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(255, 0, 255, 0.3);
+  box-shadow: 0 0 20px rgba(224, 13, 224, 0.919);
 }
 
 /* Responsive Design */
@@ -409,29 +407,54 @@ body {
   }
 }
 
-@keyframes popUp {
+#particles-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Particle Container */
+.particle-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0; /* Behind everything but above background */
+  pointer-events: none;
+}
+
+/* Base Particle Style */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ff00ff 0%, #00ffff 100%);
+  opacity: 0.6;
+  animation: floatUp linear infinite;
+}
+
+.particle img {
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+
+
+/* Float Animation */
+@keyframes floatUp {
   0% {
+    transform: translateY(100vh) scale(1);
     opacity: 0;
-    transform: scale(0.5);
   }
-  60% {
-    opacity: 1;
-    transform: scale(1.1);
+  50% {
+    opacity: 0.6;
   }
   100% {
-    transform: scale(1);
+    transform: translateY(-10vh) scale(1);
+    opacity: 0;
   }
-}
-.register {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 30px 20px;
-  border-radius: 15px;
-  margin: 30px auto;
-  max-width: 500px;
-  width: 90%;
-  backdrop-filter: blur(8px);
-  border: 2px solid #ff00ff;
-
-  /* Transition effect on hover */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

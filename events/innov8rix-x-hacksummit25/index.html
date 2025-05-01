@@ -4,74 +4,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hack Summit 2025</title>
-  <link rel="stylesheet" href="./css/styles.css"> <!-- Linking external CSS -->
-
-  <style>
-    /* Add this inside your head or styles.css */
-    .prize-info {
-      opacity: 0;
-      transform: translateY(50px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-
-    .prize-info.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
-
+  <link rel="stylesheet" href="styles.css"> <!-- Linking external CSS -->
 </head>
 
 <body>
 
+<canvas id="particles-canvas"></canvas>
+
   <div class="overlay"></div>
+
+  <div class="particle-container"></div>
+
 
   <div class="container">
     <!-- Navbar -->
-    <div class="navbar">
+    <div class="navbar animate-on-scroll">
       <div class="logo-title">
-        <img src="./images/logo.png" alt="College Logo" class="college-logo">
+        <img src="logo.png" alt="College Logo" class="college-logo">
         <div class="college-name">
           <h1>P A COLLEGE OF ENGINEERING</h1>
-          <h2>Affiliated to VTU | Recognized by Karnataka Govt.</h2>
-          <h2>Approved by AICTE</h2>
+          <h2>Affiliated to VTU | Recognized by Karnataka Govt.<br>Approved by AICTE</h2>
         </div>
       </div>
       <div class="summit-logo">
-        <img src="./images/logo2.png" alt="Hack Summit Logo" class="summit-logo-img">
+        <img src="logo2.png" alt="Hack Summit Logo" class="summit-logo-img">
         <p class="glug-text">GLUG PACE</p>
       </div>
     </div>
 
     <!-- Center Text -->
-    <div class="centered-text">
+    <div class="centered-text animate-on-scroll">
       <p class="presents-text">Presents</p>
       <h2 class="tech-summit-title">A 5-Day National Level Tech Summit!</h2>
     </div>
-
+    
     <!-- Images Section -->
     <div class="image-section">
-      <div class="image-container">
-        <img src="./images/1.png" alt="Image 1" class="summit-image">
+      <div class="image-container animate-on-scroll">
+        <img src="1.png" alt="Image 1" class="summit-image">
       </div>
-      <div class="image-container">
-        <img src="./images/3.png" alt="Image 3" class="summit-image small-image">
+      <div class="image-container animate-on-scroll">
+        <img src="3.png" alt="Image 3" class="summit-image small-image">
       </div>
-      <div class="image-container">
-        <img src="./images/2.png" alt="Image 2" class="summit-image">
+      <div class="image-container animate-on-scroll">
+        <img src="2.png" alt="Image 2" class="summit-image">
       </div>
     </div>
 
     <!-- Powered By -->
-    <div class="powered-by">Powered by</div>
+    <div class="powered-by animate-on-scroll">Powered by</div>
 
     <!-- Logo 3 -->
-    <div class="logo3-container">
-      <img src="./images/logo3.png" alt="Powered Logo">
+    <div class="logo3-container animate-on-scroll">
+      <img src="logo3.png" alt="Powered Logo">
     </div>
 
     <!-- Prize Info Section -->
-    <div class="prize-info">
+    <div class="prize-info animate-on-scroll">
       <h2>Prize Pool</h2>
       <p><span class="highlighted-prize">₹65,000</span></p> 
       <p><span style="font-size: 2em; color: #ff00ff;">+</span></p> 
@@ -79,36 +68,46 @@
     </div>
 
     <!-- Event Dates -->
-    <div class="event-dates">
+    <div class="event-dates animate-on-scroll">
       May 12th - May 16th, 2025
     </div>
 
     <!-- Location Information -->
-    <div class="location-info">
+    <div class="location-info animate-on-scroll">
       <h2>Event Location</h2>
       <p><strong>Venue:</strong> P A College of Engineering, Nadupadav, Mangalore, Karnataka, India</p>
+      <a 
+        href="https://www.google.com/maps/place/P+A+College+of+Engineering,+Mangalore/@12.961436,74.902568" 
+        target="_blank"
+        style="display: inline-block; margin-top: 10px; padding: 10px 15px; background:linear-gradient(90deg, #ff00ff, #00ffff);; border: none; border-radius: 5px; text-decoration: none; color: white;">
+        📍 Open in Google Maps
+      </a>
     </div>
+    
 
     <!-- Tagline -->
-    <div class="tagline">
+    <div class="tagline animate-on-scroll">
       "Innovate beyond Limits"
     </div>
 
     <!-- Buttons Section -->
-    <div class="buttons-section">
+    <div class="buttons-section animate-on-scroll">
       <a href="Innov8rix timeline.html" class="btn register-btn" target="_blank">Innov8rix</a>
       <a href="hacksummit.html" class="btn register-btn" target="_blank">HackSummit</a>
     </div>
-   
-   <div class="extra-info-section">
+
+    <!-- Additional Info Boxes -->
+    <div class="extra-info-section">
       <!-- Innov8rix Prize Box -->
-      <div class="register">
+      <div class="prize-info animate-on-scroll">
         <h2>Innov8rix</h2>
         <p><span style="font-size: 2em; color: #00ffff;">Early Bird Premium Pass</span></p><br><br>
         <!-- Button for Innov8rix -->
         <a href="https://forms.gle/N4yLuNSKVjcua2NEA" class="btn">Register Now</a>
       </div>
-      <div class="register">
+
+      <!-- HackSummit Prize Box -->
+      <div class="prize-info animate-on-scroll">
         <h2>HackSummit'25</h2>
         <p><span style="font-size: 2em; color: #00ffff;">Register for 24-hour Hackathon</span></p><br><br>
         <p><span style="font-size: 2em; color: #ffff00;"></span></p>
@@ -118,7 +117,7 @@
     </div>
 
     <!-- Social Links -->
-    <div class="socials">
+    <div class="socials animate-on-scroll">
       <a href="https://www.instagram.com/glug_pace/" target="_blank">Instagram</a>
       <a href="https://www.linkedin.com/posts/glugpace_hacksummit2024-innovatebeyondlimits-hackathon-activity-7205908282983501824-8wgm" target="_blank">LinkedIn</a>
       <a href="http://glugpace.org/" target="_blank">Website</a>
@@ -127,25 +126,115 @@
 
   </div>
 
-  <!-- Script at the end -->
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      }, {
-        threshold: 0.2
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible'); // Re-trigger on scroll up
+        }
       });
+    }, {
+      threshold: 0.1
+    });
 
-      const prizeBox = document.querySelector('.prize-info');
-      if (prizeBox) {
-        observer.observe(prizeBox);
-      }
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
     });
   </script>
+
+<script>
+  // Particle Config
+  const canvas = document.getElementById("particles-canvas");
+  const ctx = canvas.getContext("2d");
+
+  let particlesArray = [];
+  const colors = ["#ff00ff", "#00ffff", "#ffffff"];
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+
+  class Particle {
+    constructor() {
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height;
+      this.size = Math.random() * 2 + 1;
+      this.speedX = (Math.random() - 0.5) * 0.7;
+      this.speedY = (Math.random() - 0.5) * 0.7;
+      this.color = colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    update() {
+      this.x += this.speedX;
+      this.y += this.speedY;
+
+      if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+      if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+    }
+
+    draw() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fillStyle = this.color;
+      ctx.shadowColor = this.color;
+      ctx.shadowBlur = 10;
+      ctx.fill();
+    }
+  }
+
+  function initParticles(count) {
+    particlesArray = [];
+    for (let i = 0; i < count; i++) {
+      particlesArray.push(new Particle());
+    }
+  }
+
+  function animateParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particlesArray.forEach(particle => {
+      particle.update();
+      particle.draw();
+    });
+    requestAnimationFrame(animateParticles);
+  }
+
+  initParticles(80);
+  animateParticles();
+</script>
+
+<script>
+  const particleContainer = document.querySelector('.particle-container');
+
+  for (let i = 0; i < 60; i++) {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+
+    // Random size between 4px and 12px
+    const size = Math.random() * 8 + 4;
+    particle.style.width = `${size}px`;
+    particle.style.height = `${size}px`;
+
+    // Random horizontal position
+    particle.style.left = `${Math.random() * 100}%`;
+
+    // Random animation duration between 5s and 15s
+    particle.style.animationDuration = `${Math.random() * 10 + 5}s`;
+
+    // Random animation delay
+    particle.style.animationDelay = `${Math.random() * 10}s`;
+
+    // Optional: Vary opacity a bit
+    particle.style.opacity = (Math.random() * 0.4 + 0.4).toFixed(2);
+
+    particleContainer.appendChild(particle);
+  }
+</script>
 
 </body>
 </html>
