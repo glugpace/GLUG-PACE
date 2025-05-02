@@ -21,7 +21,7 @@
             line-height: 1.6;
             color: var(--light);
             background-color: var(--darker);
-            background-image: url('background.jpg');
+            background-image: url("images/background.png");
             margin: 0;
             padding: 0;
         }
@@ -156,6 +156,17 @@
             text-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
         }
         
+        .event-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .event-link .event:hover {
+            background-color: rgba(255, 255, 255, 0.1); /* subtle hover */
+            cursor: pointer;
+        }
+
         .event-venue {
             display: inline-block;
             background: rgba(161, 1, 103, 0.2);
@@ -201,9 +212,130 @@
                 margin-top: 0.5rem;
             }
         }
+        .button-wrapper {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: var(--dark);
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 0 15px var(--primary);
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: var(--accent);
+    color: var(--dark);
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 0 20px var(--secondary);
+}
+
+#particles-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Particle Container */
+.particle-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0; /* Behind everything but above background */
+  pointer-events: none;
+}
+
+/* Base Particle Style */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ff00ff 0%, #00ffff 100%);
+  opacity: 0.6;
+  animation: floatUp linear infinite;
+}
+
+.particle img {
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+
+/* Float Animation */
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) scale(1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+    opacity: 0;
+  }
+}
+.powered-by {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .powered-by-text {
+      font-size: 24px;
+      font-weight: bold;
+      background: linear-gradient(90deg, #ff00ff, #00ffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 2s infinite alternate;
+    }
+
+    /* Logo 3 */
+.logo3-container {
+  margin-top: 20px;
+}
+
+.logo3-container img {
+  width: 300px;
+  height: auto;
+}
+
+/* Socials */
+.socials {
+  margin-top: 30px;
+  font-size: 1em;
+  text-align: center;
+}
+
+.socials a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.socials a:hover {
+  text-decoration: underline;
+  color: #ff00ff;
+}
+
+
     </style>
 </head>
 <body>
+    <canvas id="particles-canvas"></canvas>
+    <div class="particle-container"></div>
     <header>
         <div class="container">
             <h1><i class="fas fa-rocket"></i> InnoV8rix Event Lineup</h1>
@@ -211,8 +343,9 @@
         </div>
     </header>
 
-    <div style="text-align: center; margin-top: -1rem; margin-bottom: 2rem;">
-    <a href="https:Innov8rix-HackSummit Event Brochure.pdf" download target="_blank" style="
+    <!-- Add this after the </header> and before <div class="container"> -->
+<div style="text-align: center; margin-top: -1rem; margin-bottom: 2rem;">
+    <a href="Innov8rix-HackSummit Event Brochure.pdf" download target="_blank" style="
         display: inline-block;
         padding: 0.8rem 1.5rem;
         font-size: 1rem;
@@ -227,7 +360,8 @@
     " onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 25px rgba(255,0,255,0.6)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 15px rgba(255,0,255,0.4)'">
         <i class="fas fa-download"></i> Download the Brochure
     </a>
-   </div>
+</div>
+
     
     <div class="container">
         <!-- Day 1 -->
@@ -238,34 +372,45 @@
             </div>
             
             <div class="timeline">
+                <a href="events/terminal.html" class="event-link" target="_blank">
+                    <div class="event">
+                      <div class="event-time">09:30 - 10:30</div>
+                      <h3 class="event-name"><i class="fas fa-bolt"></i>Terminal Tussle</h3>
+                      <span class="event-venue">NT Lab</span>
+                    </div>
+                  </a>
+
+                <a href="events/blackout.html" class="event-link" target="_blank">
+                    <div class="event">
+                      <div class="event-time">10:30 - 11:30</div>
+                      <h3 class="event-name"><i class="fas fa-bolt"></i> Blackout</h3>
+                      <span class="event-venue">Unix Lab</span>
+                    </div>
+                  </a>
+                  
                 <div class="event">
-                  <div class="event-time">09:30 - 10:30</div>
-                  <h3 class="event-name" ><i class="fas fa-terminal"></i> Terminal Tussle</h3>
-                  <span class="event-venue">NT Lab & Novel Lab</span>
-                </div>
-                <div class="event">
-                    <div class="event-time">10:30 - 11:30</div>
-                    <h3 class="event-name" ><i class="fas fa-bolt"></i> Blackout</h3>
-                    <span class="event-venue">Unix Lab</span>
-                </div>
-                
-                <div class="event">
+                <a href="techxplore/techxplore.html" class="event-link" target="_blank">
                     <div class="event-time">11:30 - 12:30</div>
                     <h3 class="event-name"><i class="fas fa-search"></i> TechXplore</h3>
                     <span class="event-venue">Edusat Hall</span>
                 </div>
+                </a>
                 
+                <a href="smack-d-bug/smack.html" class="event-link" target="_blank">
                 <div class="event">
                     <div class="event-time">01:30 - 02:30</div>
                     <h3 class="event-name"><i class="fas fa-bug"></i> Smack-D-Bug</h3>
                     <span class="event-venue">Unix Lab</span>
                 </div>
+                </a>
                 
+                <a href="events/research.html" class="event-link" target="_blank">
                 <div class="event">
                     <div class="event-time">02:30 - 03:30</div>
                     <h3 class="event-name"><i class="fas fa-flask"></i> Research Revelations</h3>
                     <span class="event-venue">Web Lab</span>
                 </div>
+                </a>
             </div>
         </section>
         
@@ -289,11 +434,13 @@
                     <span class="event-venue">GD Room</span>
                 </div>
                 
+                <a href="syntaxroyale/syntaxroyale.html" class="event-link" target="_blank">
                 <div class="event">
                     <div class="event-time">11:00 - 12:00</div>
                     <h3 class="event-name"><i class="fas fa-crown"></i> Syntax Royale</h3>
                     <span class="event-venue">Unix Lab</span>
                 </div>
+                </a>
                 
                 <div class="event">
                     <div class="event-time">11:30 - 12:30</div>
@@ -373,5 +520,133 @@
             </div>
         </section>
     </div>
+
+    
+    <div class="powered-by">
+        <div class="powered-by-text">Powered by</div>
+        <!-- Logo 3 -->
+    <div class="logo3-container animate-on-scroll">
+        <img src="images/logo3.png" alt="Powered Logo">
+      </div>
+      </div>
+
+      <!-- Social Links -->
+    <div class="socials animate-on-scroll">
+        <a href="https://www.instagram.com/glug_pace/" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/posts/glugpace_hacksummit2024-innovatebeyondlimits-hackathon-activity-7205908282983501824-8wgm" target="_blank">LinkedIn</a>
+        <a href="http://glugpace.org/" target="_blank">Website</a>
+        <a href="https://github.com/GLUGPACE" target="_blank">GitHub</a>
+      </div>
+      <br>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            } else {
+              entry.target.classList.remove('visible'); // Re-trigger on scroll up
+            }
+          });
+        }, {
+          threshold: 0.1
+        });
+    
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+          observer.observe(el);
+        });
+      </script>
+    
+    <script>
+      // Particle Config
+      const canvas = document.getElementById("particles-canvas");
+      const ctx = canvas.getContext("2d");
+    
+      let particlesArray = [];
+      const colors = ["#ff00ff", "#00ffff", "#ffffff"];
+    
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    
+      window.addEventListener("resize", () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      });
+    
+      class Particle {
+        constructor() {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.size = Math.random() * 2 + 1;
+          this.speedX = (Math.random() - 0.5) * 0.7;
+          this.speedY = (Math.random() - 0.5) * 0.7;
+          this.color = colors[Math.floor(Math.random() * colors.length)];
+        }
+    
+        update() {
+          this.x += this.speedX;
+          this.y += this.speedY;
+    
+          if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+          if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+        }
+    
+        draw() {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fillStyle = this.color;
+          ctx.shadowColor = this.color;
+          ctx.shadowBlur = 10;
+          ctx.fill();
+        }
+      }
+    
+      function initParticles(count) {
+        particlesArray = [];
+        for (let i = 0; i < count; i++) {
+          particlesArray.push(new Particle());
+        }
+      }
+    
+      function animateParticles() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particlesArray.forEach(particle => {
+          particle.update();
+          particle.draw();
+        });
+        requestAnimationFrame(animateParticles);
+      }
+    
+      initParticles(80);
+      animateParticles();
+    </script>
+    
+    <script>
+      const particleContainer = document.querySelector('.particle-container');
+    
+      for (let i = 0; i < 60; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+    
+        // Random size between 4px and 12px
+        const size = Math.random() * 8 + 4;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+    
+        // Random horizontal position
+        particle.style.left = `${Math.random() * 100}%`;
+    
+        // Random animation duration between 5s and 15s
+        particle.style.animationDuration = `${Math.random() * 10 + 5}s`;
+    
+        // Random animation delay
+        particle.style.animationDelay = `${Math.random() * 10}s`;
+    
+        // Optional: Vary opacity a bit
+        particle.style.opacity = (Math.random() * 0.4 + 0.4).toFixed(2);
+    
+        particleContainer.appendChild(particle);
+      }
+    </script>
 </body>
 </html>
