@@ -1,0 +1,286 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Background */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    background-image: url('assets/bg/background.png'); /* Use your previous background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    min-height: 100vh;
+    position: relative;
+    padding: 30px;
+  }
+  
+  /* Overlay for dark shade */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+  }
+  
+  /* Container */
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Event Card */
+  .event-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid #ff00ff;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+  }
+  
+  /* Gradient Titles */
+  .event-title {
+    font-size: 3em;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff00ff, #00ffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .tagline {
+    font-style: italic;
+    font-size: 1.3em;
+    text-align: center;
+    color: #ddd;
+    margin-bottom: 30px;
+  }
+  
+  /* Grid Layout */
+  .event-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  /* Left Info */
+  .left-info {
+    flex: 2;
+  }
+  
+  .left-info h2, .left-info h3 {
+    margin-top: 20px;
+    color: #ff00ff;
+  }
+  
+  .left-info span {
+    color: white;
+    font-weight: bold;
+  }
+  
+  .left-info ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    line-height: 1.8em;
+  }
+  
+  .left-info li {
+    list-style: disc;
+  }
+  
+  /* Right Info */
+  .right-info {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #00ffff;
+    text-align: left;
+  }
+  
+  .right-info h3 {
+    margin: 10px 0;
+    color: #00ffff;
+  }
+  
+  .right-info span {
+    color: #fff;
+  }
+  
+  .event-image {
+    width: 100%;
+    opacity: 0.7;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 2px solid #ff00ff;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .event-grid {
+      flex-direction: column;
+    }
+  
+    .event-title {
+      font-size: 2em;
+    }
+  
+    .tagline {
+      font-size: 1em;
+    }
+  }
+
+  /* Socials */
+.socials {
+    margin-top: 30px;
+    font-size: 1em;
+    text-align: center;
+  }
+  
+  .socials a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .socials a:hover {
+    text-decoration: underline;
+    color: #ff00ff;
+  }
+
+  /* Scroll Down Animation */
+.scroll-down {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+  opacity: 1;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.scroll-down.hide {
+  opacity: 0;
+  transform: translateX(-50%) translateY(20px);
+  pointer-events: none;
+}
+
+.chevron {
+  width: 20px;
+  height: 5px;
+  background: linear-gradient(90deg, #ff00ff, #00ffff);
+  transform: rotate(45deg);
+  margin-bottom: 5px;
+  animation: pulse 2s infinite;
+}
+
+.chevron:first-child {
+  transform: rotate(-45deg) translateY(6px) translateX(-4px);
+}
+
+.chevron:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.chevron:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.scroll-text {
+  color: white;
+  font-size: 0.8em;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translateY(0) scale(0.5);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translateY(20px) scale(0.5);
+  }
+}
+
+.event-card {
+  animation: glow-pulse 4s infinite alternate;
+}
+
+@keyframes glow-pulse {
+  0% { box-shadow: 0 0 10px rgba(255, 0, 255, 0.3); }
+  100% { box-shadow: 0 0 20px #ff00ff, 0 0 30px rgba(0, 255, 255, 0.5); }
+}
+.event-card {
+  transition: transform 0.5s ease;
+}
+
+.event-card:hover {
+  transform: perspective(1000px) rotateX(1deg) rotateY(2deg);
+}
+#particles-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Particle Container */
+.particle-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0; /* Behind everything but above background */
+  pointer-events: none;
+}
+
+/* Base Particle Style */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ff00ff 0%, #00ffff 100%);
+  opacity: 0.6;
+  animation: floatUp linear infinite;
+}
+
+
+/* Float Animation */
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) scale(1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+    opacity: 0;
+  }
+}
