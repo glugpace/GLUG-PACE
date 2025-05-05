@@ -1,80 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>HackSummit Timeline</title>
-    <style>
-        body {
-            background: black url('./images/background.jpg') no-repeat center center/cover;
-            margin: 0;
-            padding: 20px;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            color: white;
-        }
-        img {
-            max-width: 90%;
-            height: auto;
-            margin-bottom: 30px;
-        }
-        .info-container {
-            width: 90%;
-            max-width: 800px;
-            background: rgba(30, 30, 30, 0.8);
-            padding: 25px;
-            border-radius: 10px;
-            border-left: 4px solid #A10167;
-        }
-        .section-title {
-            color: #A10167;
-            font-size: 22px;
-            margin: 20px 0 10px;
-            text-align: center;
-        }
-        .info {
-            font-size: 18px;
-            text-align: justify;
-            line-height: 1.6;
-            color: #A10167;
-        }
-        .name {
-            font-weight: bold;
-            color: #00D4FF;
-        }
-        .role, .ph {
-            font-style: italic;
-            color: #A10167;
-        }
-        hr {
-            border: none;
-            height: 1px;
-            background: linear-gradient(to right, transparent, #A10167, transparent);
-            margin: 25px 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HackSummit Timeline</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-        .student-coordinators {
-            display: flex;
-            justify-content: space-evenly;
-        }
+    body {
+      background: black url('./images/background.png') no-repeat center center/cover;
+      margin: 0;
+      padding: 20px;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      color: white;
+      position: relative;
+      overflow-x: hidden;
+    }
 
-        .hafeez, .afran, .bilal {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin-top: 20px;
-        }
-    </style>
+    img {
+      max-width: 90%;
+      height: auto;
+      margin-bottom: 30px;
+    }
+
+    .info-container {
+      width: 90%;
+      max-width: 800px;
+      background: rgba(30, 30, 30, 0.8);
+      padding: 25px;
+      border-radius: 10px;
+      border-left: 4px solid #A10167;
+      margin: auto;
+    }
+
+    .section-title {
+      color: #A10167;
+      font-size: 22px;
+      margin: 20px 0 10px;
+      text-align: center;
+    }
+
+    .info {
+      font-size: 18px;
+      text-align: justify;
+      line-height: 1.6;
+      color: #A10167;
+    }
+
+    .name {
+      font-weight: bold;
+      color: #00D4FF;
+    }
+
+    .role, .ph {
+      font-style: italic;
+      color: #A10167;
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #A10167, transparent);
+      margin: 25px 0;
+    }
+
+    .student-coordinators {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .hafeez, .afran, .bilal {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .powered-by {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .powered-by-text {
+      font-size: 24px;
+      font-weight: bold;
+      background: linear-gradient(90deg, #ff00ff, #00ffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 2s infinite alternate;
+    }
+
+    .logo3-container {
+      margin-top: 20px;
+    }
+
+    .logo3-container img {
+      width: 300px;
+      max-width: 90%;
+      height: auto;
+    }
+
+    .socials {
+      margin-top: 30px;
+      font-size: 1em;
+      text-align: center;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .socials a:hover {
+      text-decoration: underline;
+      color: #ff00ff;
+    }
+
+    .particle-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, #ff00ff 0%, #00ffff 100%);
+      opacity: 0.6;
+      animation: floatUp linear infinite;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) scale(1);
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.6;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1);
+        opacity: 0;
+      }
+    }
+
+    #particles-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 600px) {
+      .student-coordinators {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .powered-by-text {
+        font-size: 18px;
+      }
+
+      .info-container {
+        padding: 15px;
+      }
+
+      .section-title {
+        font-size: 18px;
+      }
+
+      .info {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <img src="./images/Timeline.png" alt="HackSummit Timeline">
+  <!-- Particle Layers -->
+  <canvas id="particles-canvas"></canvas>
+  <div class="particle-container"></div>
 
-    <div style="text-align: center; margin-top: -1rem; margin-bottom: 2rem;">
+  <!-- Content -->
+  <img src="./images/Timeline.png" alt="HackSummit Timeline">
+
+  <div style="text-align: center; margin-top: -1rem; margin-bottom: 2rem;">
     <a href="https:Innov8rix-HackSummit Event Brochure.pdf" download target="_blank" style="
         display: inline-block;
         padding: 0.8rem 1.5rem;
@@ -88,36 +216,143 @@
         box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
         transition: all 0.3s ease;
     " onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 25px rgba(255,0,255,0.6)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 15px rgba(255,0,255,0.4)'">
-        <i class="fas fa-download"></i> Download the Brochure
+      <i class="fas fa-download"></i> Download the Brochure
     </a>
-</div>
+  </div>
 
-    <div class="info-container">        
-        <div class="info">
-            <div class="section-title"><b>Faculty Coordinator</b></div>
-            <div class="hafeez">
-                <div class="name">Dr. Mohammed Hafeez MK</div>
-                <div class="ph">+91 6363553239</div>
-                <div class="role">Associate Professor, Dept of CSE</div>
-            </div>
-            <hr>
-
-            <div class="section-title"><b>Student Coordinators</b></div>
-            <div class="student-coordinators">
-                <div class="bilal">
-                    <div class="name">Mohammed Bilal</div>
-                    <div class="ph">+91 8088787427</div>
-                    <div class="role">Lead Organiser</div>
-                </div>
-
-                <div class="afran">
-                    <div class="name">Abdul Kader Suhair Afran</div>
-                    <div class="ph">+91 8310281654</div>
-                    <div class="role">General Secretary</div>
-                </div>
-        </div>
-        </div>
+  <div class="powered-by">
+    <div class="powered-by-text">Powered by</div>
+    <div class="logo3-container animate-on-scroll">
+      <img src="images/logo3.png" alt="Powered Logo">
     </div>
+  </div>
 
+  <div class="info-container">
+    <div class="info">
+      <div class="section-title"><b>Faculty Coordinator</b></div>
+      <div class="hafeez">
+        <div class="name">Dr. Mohammed Hafeez MK</div>
+        <div class="ph">+91 6363553239</div>
+        <div class="role">Associate Professor, Dept of CSE</div>
+      </div>
+      <hr>
+      <div class="section-title"><b>Student Coordinators</b></div>
+      <div class="student-coordinators">
+        <div class="bilal">
+          <div class="name">Mohammed Bilal</div>
+          <div class="ph">+91 8088787427</div>
+          <div class="role">Lead Organiser</div>
+        </div>
+        <div class="afran">
+          <div class="name">Abdul Kader Suhair Afran</div>
+          <div class="ph">+91 8310281654</div>
+          <div class="role">General Secretary</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="socials animate-on-scroll">
+    <a href="https://www.instagram.com/glug_pace/" target="_blank">Instagram</a>
+    <a href="https://www.linkedin.com/posts/glugpace_hacksummit2024-innovatebeyondlimits-hackathon-activity-7205908282983501824-8wgm" target="_blank">LinkedIn</a>
+    <a href="http://glugpace.org/" target="_blank">Website</a>
+    <a href="https://github.com/GLUGPACE" target="_blank">GitHub</a>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Animate on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+  </script>
+
+  <script>
+    // Canvas Particles
+    const canvas = document.getElementById("particles-canvas");
+    const ctx = canvas.getContext("2d");
+    let particlesArray = [];
+    const colors = ["#ff00ff", "#00ffff", "#ffffff"];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 1;
+        this.speedX = (Math.random() - 0.5) * 0.7;
+        this.speedY = (Math.random() - 0.5) * 0.7;
+        this.color = colors[Math.floor(Math.random() * colors.length)];
+      }
+
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+
+        if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+        if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+      }
+
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.shadowColor = this.color;
+        ctx.shadowBlur = 10;
+        ctx.fill();
+      }
+    }
+
+    function initParticles(count) {
+      particlesArray = [];
+      for (let i = 0; i < count; i++) {
+        particlesArray.push(new Particle());
+      }
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particlesArray.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animateParticles);
+    }
+
+    initParticles(80);
+    animateParticles();
+  </script>
+
+  <script>
+    // Floating Div Particles
+    const container = document.querySelector('.particle-container');
+    for (let i = 0; i < 60; i++) {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      const size = Math.random() * 8 + 4;
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+      particle.style.left = `${Math.random() * 100}%`;
+      particle.style.animationDuration = `${Math.random() * 10 + 5}s`;
+      particle.style.animationDelay = `${Math.random() * 10}s`;
+      particle.style.opacity = (Math.random() * 0.4 + 0.4).toFixed(2);
+      container.appendChild(particle);
+    }
+  </script>
 </body>
 </html>
